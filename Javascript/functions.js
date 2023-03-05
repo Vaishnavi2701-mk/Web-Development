@@ -17,3 +17,25 @@ function lifeRemaining(age) {
 
 lifeRemaining(51);
 lifeRemaining(24);
+
+// Return output type functions
+// invoking a function and declaring the function is different
+
+// Consider there are certain amount of money, we have to buy bottle of milk.
+// We have to calculate change we get and if specific cost of bottle is given then calculate number of bottles we get
+
+function calNumofbottles(money, costofbottle) {
+  var numofBottles = money / costofbottle;
+  return numofBottles;
+}
+
+console.log("You can buy "+ Math.floor(calNumofbottles(4, 1.5)) + " bottles.");
+
+// Math.floor round up number less than or equal to that number
+
+function calChange (money, costofbottle) { 
+  var change = money%costofbottle;
+  return change;
+}
+
+console.log("You will be getting Rs." + calChange(4, 1.5) + " change.");
