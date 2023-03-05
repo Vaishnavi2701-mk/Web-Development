@@ -39,3 +39,15 @@ function calChange (money, costofbottle) {
 }
 
 console.log("You will be getting Rs." + calChange(4, 1.5) + " change.");
+
+// BMI calculator
+
+// BMI = weight(kg) / (height ^ 2)(m^2);
+
+function bmiCalculator(weight, height){
+  var calBMI = Math.round(weight/Math.pow(height,2));
+  return calBMI;
+}
+
+var bmi = bmiCalculator(65, 1.65);
+console.log("Your BMI is "+bmi);
