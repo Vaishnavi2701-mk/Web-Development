@@ -29,12 +29,12 @@ function calNumofbottles(money, costofbottle) {
   return numofBottles;
 }
 
-console.log("You can buy "+ Math.floor(calNumofbottles(4, 1.5)) + " bottles.");
+console.log("You can buy " + Math.floor(calNumofbottles(4, 1.5)) + " bottles.");
 
 // Math.floor round up number less than or equal to that number
 
-function calChange (money, costofbottle) { 
-  var change = money%costofbottle;
+function calChange(money, costofbottle) {
+  var change = money % costofbottle;
   return change;
 }
 
@@ -44,10 +44,12 @@ console.log("You will be getting Rs." + calChange(4, 1.5) + " change.");
 
 // BMI = weight(kg) / (height ^ 2)(m^2);
 
-function bmiCalculator(weight, height){
-  var calBMI = Math.round(weight/Math.pow(height,2));
+function bmiCalculator(weight, height) {
+  var calBMI = Math.round(weight / Math.pow(height, 2));
   return calBMI;
 }
 
 var bmi = bmiCalculator(65, 1.65);
-console.log("Your BMI is "+bmi);
+console.log("Your BMI is " + bmi);
+
+
