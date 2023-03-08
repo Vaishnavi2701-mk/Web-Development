@@ -78,39 +78,39 @@ document.querySelector("li a"); <br>
 document.querySelector("a"); <br>
 <a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
 
-// tag with class, this will give all the elements with li
-document.querySelector("li .item");
+// tag with class, this will give all the elements with li <br>
+document.querySelector("li .item"); <br>
 
-// ID with tag
-document.querySelector("#list a");
-<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​
+// ID with tag <br>
+document.querySelector("#list a"); <br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
 
-// ID with class, this will give only first class with that className
-document.querySelector("#list .item");
-<li class="item">...</li>
+// ID with class, this will give only first class with that className <br>
+document.querySelector("#list .item"); <br>
+<li class="item">...</li> <br>
 
-// querySelectorAll
-// for every tag with the same class it will give us an array
+// querySelectorAll <br> <br>
+// for every tag with the same class it will give us an array <br>
 
-document.querySelectorAll("#list .item");
-NodeList(3) [li.item, li.item, li.item]
+document.querySelectorAll("#list .item"); <br>
+NodeList(3) [li.item, li.item, li.item] <br>
 
-// this is unproper way to acces the item
-document.querySelectorAll("#list .item").style.color="red;
+// this is unproper way to acces the item <br>
+document.querySelectorAll("#list .item").style.color="red; <br>
 
-VM2061:1 Uncaught SyntaxError: Invalid or unexpected token
+VM2061:1 Uncaught SyntaxError: Invalid or unexpected token <br>
 
-// this is the correct way
-document.querySelectorAll("#list.item")[2].style.color="red";
-red
+// this is the correct way <br>
+document.querySelectorAll("#list.item")[2].style.color="red"; <br>
+red <br>
 
-// this will change only bullet color of first li
-document.querySelector("li").style.color="red";
-'red'
+// this will change only bullet color of first li <br>
+document.querySelector("li").style.color="red"; <br>
+'red' <br>
 
-// this will change color of particular element
-document.querySelector("li a").style.color="red";
-'red'
+// this will change color of particular element <br>
+document.querySelector("li a").style.color="red"; <br>
+'red' <br>
 </li>
 </ul>
 }
