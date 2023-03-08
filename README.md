@@ -57,26 +57,26 @@ document.getElementsByClassName("btn")[0].style.color = "red";
 <li> querySelector can use tag, class or id but we have to follow certain instructions, like for id we have to use # and for class we have to use .
 document.querySelector("h1");
      
-<!--<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​-->
-document.querySelector("text");
-null
-document.querySelector("#text");
+<!--<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​--> <br>
+document.querySelector("text"); <br>
+null <br>
+document.querySelector("#text"); <br>
 
-<!--<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​-->
-document.querySelector("list");
+<!--<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​--> <br>
+document.querySelector("list"); <br>
 
-null
-document.querySelector(".list");
+null <br>
+document.querySelector(".list"); <br>
 
 
-<li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​</li>​
+<li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​</li>​ <br>
 
-// We can use hierarchical tag <br>
+// We can use hierarchical tag <br> 
 document.querySelector("li a"); <br>
 <a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
 
-document.querySelector("a");
-<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​
+document.querySelector("a"); <br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
 
 // tag with class, this will give all the elements with li
 document.querySelector("li .item");
