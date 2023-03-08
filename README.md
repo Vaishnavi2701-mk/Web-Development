@@ -71,9 +71,9 @@ document.querySelector(".list");
 
 <li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​</li>​
 
-// We can use hierarchical tag
-document.querySelector("li a");
-<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​
+// We can use hierarchical tag <br>
+document.querySelector("li a"); <br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
 
 document.querySelector("a");
 <a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​
