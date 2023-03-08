@@ -56,12 +56,12 @@ document.getElementsByClassName("btn")[0].style.color = "red";
 'purple'</li>
 <li> querySelector can use tag, class or id but we have to follow certain instructions, like for id we have to use # and for class we have to use .
 document.querySelector("h1");
-//<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​
+//<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​//
 document.querySelector("text");
 null
 document.querySelector("#text");
 
-//<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​
+//<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​//
 document.querySelector("list");
 
 null
