@@ -26,4 +26,14 @@ Execution Context contains 2 things <strong> Memory (variable Environment) </str
 
 Eveerything which is gona executed by javascript, importantly execution context is gonna stored inside call stack so synchronization would be maintained
 
-
+<h1> DOM </h1>
+{
+<ul type = bullet>
+<li> Document Object Model </li>
+<li> Programming Interface of web document, represents web pages, we can use it to change or modifiy structure, style and content of web page. </li>
+<li> document is a keyword.</li>
+<li> document.firstElementchild => html
+     document.firstElementchild.lastElementchild => body</li>
+  <li> we can use last and firstElementchild only </li>
+</ul>
+}
