@@ -54,5 +54,62 @@ document.getElementsByClassName("btn")[0].style.color = "red";
 <li> getElementbyID => this can change styling/structure by ID and as ID is uniquein the keyword we can say element only, no pural form 
      document.getElementById("text").style.color="purple";
 'purple'</li>
+<li> querySelector can use tag, class or id but we have to follow certain instructions, like for id we have to use # and for class we have to use .
+document.querySelector("h1");
+<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​
+document.querySelector("text");
+null
+document.querySelector("#text");
+
+<h1 id=​"text" style=​"color:​ purple;​">​Hello​</h1>​
+document.querySelector("list");
+
+null
+document.querySelector(".list");
+
+
+<li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​</li>​
+
+// We can use hierarchical tag
+document.querySelector("li a");
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​
+
+document.querySelector("a");
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​
+
+// tag with class, this will give all the elements with li
+document.querySelector("li .item");
+
+// ID with tag
+document.querySelector("#list a");
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​
+
+// ID with class, this will give only first class with that className
+document.querySelector("#list .item");
+<li class="item">...</li>
+
+// querySelectorAll
+// for every tag with the same class it will give us an array
+
+document.querySelectorAll("#list .item");
+NodeList(3) [li.item, li.item, li.item]
+
+// this is unproper way to acces the item
+document.querySelectorAll("#list .item").style.color="red;
+
+VM2061:1 Uncaught SyntaxError: Invalid or unexpected token
+
+// this is the correct way
+document.querySelectorAll("#list.item")[2].style.color="red";
+red
+
+// this will change only bullet color of first li
+document.querySelector("li").style.color="red";
+'red'
+
+// this will change color of particular element
+document.querySelector("li a").style.color="red";
+'red'
+</li>
 </ul>
 }
