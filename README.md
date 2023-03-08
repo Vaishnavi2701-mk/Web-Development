@@ -57,18 +57,15 @@ document.getElementsByClassName("btn")[0].style.color = "red";
 <li> querySelector can use tag, class or id but we have to follow certain instructions, like for id we have to use # and for class we have to use 
  <br>   
 document.querySelector("h1");  
- <p> h1 id=​"text" style=​"color:​ purple;​" ​Hello​/h1 </p> <br>
+ <p> h1 id=​"text" style=​"color:​ purple;​" ​Hello​ /h1 </p> <br>
 document.querySelector("text"); <br>
 null <br>
 document.querySelector("#text"); <br>
 
-<p> <h1 id=​"text" style=​"color:​ purple;​">​Hello​</p>​<br>
-document.querySelector("list"); <br>
-
+<p> h1 id=​"text" style=​"color:​ purple;​" Hello​ /h1 </p>​<br>
+document.querySelector("list"); 
 null <br>
-document.querySelector(".list"); <br>
-
-
+document.querySelector(".list"); 
 <li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​</li>​ <br>
 
 // We can use hierarchical tag <br> 
