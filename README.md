@@ -120,3 +120,26 @@ document.querySelector("button").style.outline = "thin dotted #0000FF";<br>
 
 document.querySelector("button").style.backgroundColor = "yellow";<br>
 'yellow' <br>
+
+<h3> The Seperation of concerns : The structure VS The Style VS The Behaviour </h3> <br>
+
+// Adding huge class styling inside css;
+// classList gives classes<br>
+
+document.querySelector("h1").classList;<br>
+DOMTokenList ['huge', value: 'huge']<br>
+
+// classList have 3 main attributes add, remove, toggle;
+document.querySelector("h1").classList.add("huge");<br>
+undefined<br>
+document.querySelector("h1").classList.remove("huge");<br>
+undefined<br>
+// Toggle will basically like if its enabled then disable it and vice versa <br>
+document.querySelector("h1").classList.toggle("huge");<br>
+true<br>
+document.querySelector("h1").classList.toggle("huge");<br>
+false<br>
+document.querySelector("h1").classList.toggle("huge");<br>
+true<br>
+document.querySelector("h1").classList.toggle("huge");<br>
+false<br>
