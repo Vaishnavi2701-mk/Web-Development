@@ -143,3 +143,32 @@ document.querySelector("h1").classList.toggle("huge");<br>
 true<br>
 document.querySelector("h1").classList.toggle("huge");<br>
 false<br>
+
+<h3> Manipulating text and attributes </h3><br>
+
+//innerHTML and textContent reads the content inside a tag <br>
+// The only difference is innerHTML will read content with other tags inside a input tag and textContent will only read a text<br>
+
+document.querySelector("h1").innerHTML;<br>
+'<strong>Hello</strong>'<br>
+document.querySelector("h1").textContent;<br>
+'Hello'<br>
+document.querySelector("h1").innerHTML="<em>Good Bye</em>";<br>
+'<em>Good Bye</em>'<br>
+document.querySelector("h1").textContent;<br>
+'Good Bye'<br>
+
+// attribute property will give an attributes attached with given tag <br>
+document.querySelector("a");<br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​<br>
+
+document.querySelector("a").attribute;<br>
+NamedNodeMap {0: href, href: href, length: 1}<br>
+
+// getAttribute will give a value of an attribute of specific tag <br>
+document.querySelector("a").getAttribute("href");<br>
+'https://www.google.com'<br>
+
+// setAttribute will set a value of an attribute of specific tag<br>
+document.querySelector("a").setAttribute("href", "https://www.bing.com");<br>
+undefined <br>
