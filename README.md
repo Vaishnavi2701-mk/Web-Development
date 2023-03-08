@@ -42,5 +42,13 @@ VM606:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
    // This is the error because "li" tag used multiple times, and in the keyword its getElementsByTagName 
 document.getElementsByTagName("li")[2].style.color="red";
      'red'</li>
+<li> getElementsByClassName => we can access class properties by this, as we can have multiple similar classes, "elements" used here and even if single element in the class we have to access it as an array.
+     document.getElementsByClassName("btn").style.color = "red";
+VM1103:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:52
+(anonymous) @ VM1103:1
+     // It gives error because even if the only one class "btn" used here we have to use it like an array
+document.getElementsByClassName("btn")[0].style.color = "red";
+</li>
 </ul>
 }
