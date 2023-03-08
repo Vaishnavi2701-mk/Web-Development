@@ -123,13 +123,13 @@ document.querySelector("button").style.backgroundColor = "yellow";<br>
 
 <h3> The Seperation of concerns : The structure VS The Style VS The Behaviour </h3> <br>
 
-// Adding huge class styling inside css;
+// Adding huge class styling inside css;<br>
 // classList gives classes<br>
 
 document.querySelector("h1").classList;<br>
 DOMTokenList ['huge', value: 'huge']<br>
 
-// classList have 3 main attributes add, remove, toggle;
+// classList have 3 main attributes add, remove, toggle;<br>
 document.querySelector("h1").classList.add("huge");<br>
 undefined<br>
 document.querySelector("h1").classList.remove("huge");<br>
