@@ -26,4 +26,149 @@ Execution Context contains 2 things <strong> Memory (variable Environment) </str
 
 Eveerything which is gona executed by javascript, importantly execution context is gonna stored inside call stack so synchronization would be maintained
 
+<h1> DOM </h1>
+{
+<ul type = bullet>
+<li> Document Object Model </li>
+<li> Programming Interface of web document, represents web pages, we can use it to change or modifiy structure, style and content of web page. </li>
+<li> document is a keyword.</li>
+<li> document.firstElementchild => html
+     document.firstElementchild.lastElementchild => body</li>
+<li> we can use last and firstElementchild only </li>
+<li> getElementsByTagName => we can use thus in case of accessing tag, as we know there could be multiple same tags, it also acts like an array
+     document.getElementsByTagName("li");
+HTMLCollection(3) [li.list, li.list, li.list]
+document.getElementsByTagName("li").style.color="red";
+VM606:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+   // This is the error because "li" tag used multiple times, and in the keyword its getElementsByTagName 
+document.getElementsByTagName("li")[2].style.color="red";
+     'red'</li>
+<li> getElementsByClassName => we can access class properties by this, as we can have multiple similar classes, "elements" used here and even if single element in the class we have to access it as an array.
+     document.getElementsByClassName("btn").style.color = "red";
+VM1103:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:52
+(anonymous) @ VM1103:1
+     // It gives error because even if the only one class "btn" used here we have to use it like an array
+document.getElementsByClassName("btn")[0].style.color = "red";
+</li>
+<li> getElementbyID => this can change styling/structure by ID and as ID is uniquein the keyword we can say element only, no pural form 
+     document.getElementById("text").style.color="purple";
+'purple'</li>
+<li> querySelector can use tag, class or id but we have to follow certain instructions, like for id we have to use # and for class we have to use 
+ <br>   
+document.querySelector("h1");  
+ <p> h1 id=​"text" style=​"color:​ purple;​" ​Hello​ /h1 </p> <br>
+document.querySelector("text"); <br>
+null <br>
+document.querySelector("#text"); <br>
 
+<p> h1 id=​"text" style=​"color:​ purple;​" Hello​ /h1 </p>​<br>
+document.querySelector("list"); 
+null <br>
+document.querySelector(".list"); 
+<li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​</li>​ <br>
+
+// We can use hierarchical tag <br> 
+document.querySelector("li a"); <br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
+
+document.querySelector("a"); <br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
+
+// tag with class, this will give all the elements with li <br>
+document.querySelector("li .item"); <br>
+
+// ID with tag <br>
+document.querySelector("#list a"); <br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
+
+// ID with class, this will give only first class with that className <br>
+document.querySelector("#list .item"); <br>
+<li class="item">...</li> <br>
+
+// querySelectorAll <br> <br>
+// for every tag with the same class it will give us an array <br>
+
+document.querySelectorAll("#list .item"); <br>
+NodeList(3) [li.item, li.item, li.item] <br>
+
+// this is unproper way to acces the item <br>
+document.querySelectorAll("#list .item").style.color="red; <br>
+
+VM2061:1 Uncaught SyntaxError: Invalid or unexpected token <br>
+
+// this is the correct way <br>
+document.querySelectorAll("#list.item")[2].style.color="red"; <br>
+red <br>
+
+// this will change only bullet color of first li <br>
+document.querySelector("li").style.color="red"; <br>
+'red' <br>
+
+// this will change color of particular element <br>
+document.querySelector("li a").style.color="red"; <br>
+'red' <br>
+</li>
+</ul>
+}
+
+<h3> Maniplating Web page via Javascript </h3><br>
+
+// Refer HTML DOM styling properties<br>
+document.querySelector("button").style.outline = "thin dotted #0000FF";<br>
+'thin dotted #0000FF' <br>
+
+document.querySelector("button").style.backgroundColor = "yellow";<br>
+'yellow' <br>
+
+<h3> The Seperation of concerns : The structure VS The Style VS The Behaviour </h3> <br>
+
+// Adding huge class styling inside css;<br>
+// classList gives classes<br>
+
+document.querySelector("h1").classList;<br>
+DOMTokenList ['huge', value: 'huge']<br>
+
+// classList have 3 main attributes add, remove, toggle;<br>
+document.querySelector("h1").classList.add("huge");<br>
+undefined<br>
+document.querySelector("h1").classList.remove("huge");<br>
+undefined<br>
+// Toggle will basically like if its enabled then disable it and vice versa <br>
+document.querySelector("h1").classList.toggle("huge");<br>
+true<br>
+document.querySelector("h1").classList.toggle("huge");<br>
+false<br>
+document.querySelector("h1").classList.toggle("huge");<br>
+true<br>
+document.querySelector("h1").classList.toggle("huge");<br>
+false<br>
+
+<h3> Manipulating text and attributes </h3><br>
+
+//innerHTML and textContent reads the content inside a tag <br>
+// The only difference is innerHTML will read content with other tags inside a input tag and textContent will only read a text<br>
+
+document.querySelector("h1").innerHTML;<br>
+'<strong>Hello</strong>'<br>
+document.querySelector("h1").textContent;<br>
+'Hello'<br>
+document.querySelector("h1").innerHTML="<em>Good Bye</em>";<br>
+'<em>Good Bye</em>'<br>
+document.querySelector("h1").textContent;<br>
+'Good Bye'<br>
+
+// attribute property will give an attributes attached with given tag <br>
+document.querySelector("a");<br>
+<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​<br>
+
+document.querySelector("a").attribute;<br>
+NamedNodeMap {0: href, href: href, length: 1}<br>
+
+// getAttribute will give a value of an attribute of specific tag <br>
+document.querySelector("a").getAttribute("href");<br>
+'https://www.google.com'<br>
+
+// setAttribute will set a value of an attribute of specific tag<br>
+document.querySelector("a").setAttribute("href", "https://www.bing.com");<br>
+undefined <br>
