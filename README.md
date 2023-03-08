@@ -54,15 +54,15 @@ document.getElementsByClassName("btn")[0].style.color = "red";
 <li> getElementbyID => this can change styling/structure by ID and as ID is uniquein the keyword we can say element only, no pural form 
      document.getElementById("text").style.color="purple";
 'purple'</li>
-<li> querySelector can use tag, class or id but we have to follow certain instructions, like for id we have to use # and for class we have to use .
-document.querySelector("h1");
-     
-<p> h1 id=​"text" style=​"color:​ purple;​">​Hello​</p>​ <br>
+<li> querySelector can use tag, class or id but we have to follow certain instructions, like for id we have to use # and for class we have to use 
+ <br>   
+document.querySelector("h1");  
+<p> <h1 id=​"text" style=​"color:​ purple;​">​Hello​</p>​ <br>
 document.querySelector("text"); <br>
 null <br>
 document.querySelector("#text"); <br>
 
-<p> <h1 id=​"text" style=​"color:​ purple;​">​Hello​</p>​--> <br>
+<p> <h1 id=​"text" style=​"color:​ purple;​">​Hello​</p>​<br>
 document.querySelector("list"); <br>
 
 null <br>
