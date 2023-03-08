@@ -34,6 +34,14 @@ Eveerything which is gona executed by javascript, importantly execution context 
 <li> document is a keyword.</li>
 <li> document.firstElementchild => html
      document.firstElementchild.lastElementchild => body</li>
-  <li> we can use last and firstElementchild only </li>
+<li> we can use last and firstElementchild only </li>
+<li> getElementbyID => this can change styling/structure by ID and as ID is uniquein the keyword we can say element only, no pural form </li>
+<li> document.getElementsByTagName("li");
+HTMLCollection(3) [li.list, li.list, li.list]
+document.getElementsByTagName("li").style.color="red";
+VM606:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+   // This is the error because "li" tag used multiple times, and in the keyword its getElementsByTagName 
+document.getElementsByTagName("li")[2].style.color="red";
+'red'</li>
 </ul>
 }
