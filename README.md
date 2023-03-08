@@ -114,9 +114,9 @@ document.querySelector("li a").style.color="red"; <br>
 
 <h3> Maniplating Web page via Javascript </h3><br>
 
-// Refer HTML DOM styling properties <br>
-document.querySelector("button").style.outline = "thin dotted #0000FF";
+// Refer HTML DOM styling properties<br>
+document.querySelector("button").style.outline = "thin dotted #0000FF";<br>
 'thin dotted #0000FF' <br>
 
-document.querySelector("button").style.backgroundColor = "yellow";
+document.querySelector("button").style.backgroundColor = "yellow";<br>
 'yellow' <br>
