@@ -35,7 +35,8 @@ Eveerything which is gona executed by javascript, importantly execution context 
 <li> document.firstElementchild => html
      document.firstElementchild.lastElementchild => body</li>
 <li> we can use last and firstElementchild only </li>
-<li> getElementbyID => this can change styling/structure by ID and as ID is uniquein the keyword we can say element only, no pural form document.getElementsByTagName("li");
+<li> getElementsByTagName => we can use thus in case of accessing tag, as we know there could be multiple same tags, it also acts like an array
+     document.getElementsByTagName("li");
 HTMLCollection(3) [li.list, li.list, li.list]
 document.getElementsByTagName("li").style.color="red";
 VM606:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
@@ -50,5 +51,8 @@ VM1103:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color'
      // It gives error because even if the only one class "btn" used here we have to use it like an array
 document.getElementsByClassName("btn")[0].style.color = "red";
 </li>
+<li> getElementbyID => this can change styling/structure by ID and as ID is uniquein the keyword we can say element only, no pural form 
+     document.getElementById("text").style.color="purple";
+'purple'</li>
 </ul>
 }
