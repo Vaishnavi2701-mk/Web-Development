@@ -7,7 +7,7 @@ Javascript first developed for firefox but later on it is accepted by mostly eve
 
 Everything in the Javascript is happened inside an "Execution Context"
 
-Execution Context contains 2 things <strong> Memory (variable Environment) </strong> and <strong> Code (Thread of execution) </strong> 
+Execution Context contains 2 things <strong> Memory (variable Environment) </strong> and <strong> Code (Thread of execution) </strong>
 
 <h1>Execution Context</h1> {
 <ul type = bullet>
@@ -68,7 +68,7 @@ null <br>
 document.querySelector(".list"); 
 <li class=​"list">​…​</li>​::marker​<a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​</li>​ <br>
 
-// We can use hierarchical tag <br> 
+// We can use hierarchical tag <br>
 document.querySelector("li a"); <br>
 <a href=​"https:​/​/​www.google.com">​Vaishnavi​</a>​ <br>
 
@@ -84,6 +84,7 @@ document.querySelector("#list a"); <br>
 
 // ID with class, this will give only first class with that className <br>
 document.querySelector("#list .item"); <br>
+
 <li class="item">...</li> <br>
 
 // querySelectorAll <br> <br>
@@ -108,6 +109,7 @@ document.querySelector("li").style.color="red"; <br>
 // this will change color of particular element <br>
 document.querySelector("li a").style.color="red"; <br>
 'red' <br>
+
 </li>
 </ul>
 }
@@ -172,3 +174,31 @@ document.querySelector("a").getAttribute("href");<br>
 // setAttribute will set a value of an attribute of specific tag<br>
 document.querySelector("a").setAttribute("href", "https://www.bing.com");<br>
 undefined <br>
+
+<h3> Higer Order Function</h3>
+
+// Higher Order Function <br>
+// The function which can take other functions as an input <br>
+
+function add(num1, num2) {
+return num1 + num2;
+} <br>
+
+function subtract(num1, num2) {
+return num1 - num2;
+}
+<br>
+function multiply(num1, num2) {
+return num1 \* num2;
+}
+<br>
+function divide(num1, num2) {
+return num1 / num2;
+}
+<br>
+function calculator(num1, num2, operator) {
+return operator(num1, num2);
+}
+<br>
+console.log(calculator(2, 3, subtract));
+<br>
