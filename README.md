@@ -202,3 +202,23 @@ return operator(num1, num2);
 <br>
 console.log(calculator(2, 3, subtract));
 <br>
+
+<h3> Event Listener</h3>
+
+// Impliment a functionality, if we clicked on any button it should pop up the message <br>
+
+var buttonCount = document.querySelectorAll(".drum").length;<br>
+for (var i = 0; i < buttonCount; i++) {<br>
+  document.querySelectorAll(".drum")[i].addEventListener("click", function () {<br>
+    alert("I got clicked!");<br>
+
+    // what to do when click <br>
+  });<br>
+}<br>
+
+/* document.querySelector("button").addEventListener("click", drumRoll); <br>
+// when we use a function here we didn't add () because it will act first even before the event<br>
+
+function drumRoll() {<br>
+  alert("I got clicked!");<br>
+} */<br>
