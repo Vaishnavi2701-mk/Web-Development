@@ -222,3 +222,49 @@ for (var i = 0; i < buttonCount; i++) {<br>
 function drumRoll() {<br>
   alert("I got clicked!");<br>
 } */<br>
+
+<h3> Javascript Objects </h3>
+
+var houseKeeper = { <br>
+    yearsOfExperience: 12,<br>
+    name: "Jane:",<br>
+    cleaningReport: ["bathroom", "lobby", "bedroom"]<br>
+}<br>
+undefined<br><br><br>
+
+console.log(houseKeeper.name);<br><br>
+Jane:<br>
+
+console.log(houseKeeper.yearsOfExperience);<br>
+ 12<br>
+ 
+ // Constuctor Fuction<br>
+ // Fuction Name should start with Capital letter (PascalCase)<br>
+ 
+ function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
+    this.yearsOfExperience=yearsOfExperience;<br>
+    this.name=name;<br>
+    this.cleaningReport=cleaningReport;<br>
+}<br>
+undefined<br>
+
+var houseKeeper1=new HouseKeeper(12,"Rani",["bathroom","bedroom","lobby"]);<br>
+undefined<br>
+
+houseKeeper1;<br>
+HouseKeeper {yearsOfExperience: 12, name: 'Rani', cleaningReport: Array(3)}<br>
+
+var houseKeeper2=new HouseKeeper(10,"shanti",["bathroom","bedroom","lobby"]);<br>
+undefined<br>
+
+var houseKeeper3=new HouseKeeper(15,"subh",["bathroom","bedroom","lobby"]);<br>
+undefined<br>
+
+houseKeeper2<br>
+HouseKeeper {yearsOfExperience: 10, name: 'shanti', cleaningReport: Array(3)}<br>
+
+houseKeeper3;<br>
+HouseKeeper {yearsOfExperience: 15, name: 'subh', cleaningReport: Array(3)}<br>
+
+houseKeeper2.name;<br>
+'shanti'<br>
