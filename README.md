@@ -309,20 +309,20 @@ anotherEventListner("keydown", function(event){ <br>
 
 <h3> Adding Animation to Buttons </h3>
 
-function buttonAnimation(currentkey) {
-// detecting current button
-  var activeButton = document.querySelector("." + currentkey); // .w or .a (we are using class to detect the current key)
-  // adding class pressed by classist
-  activeButton.classList.add("pressed");
+function buttonAnimation(currentkey) { <br>
+// detecting current button <br>
+  var activeButton = document.querySelector("." + currentkey); // .w or .a (we are using class to detect the current key)<br>
+  // adding class pressed by classist<br>
+  activeButton.classList.add("pressed");<br>
 
-// going back to original condition after 1 sec by removing the same class
-  setTimeout(function () {
-    activeButton.classList.remove("pressed");
-  }, 100);
-}
+// going back to original condition after 1 sec by removing the same class<br>
+  setTimeout(function () {<br>
+    activeButton.classList.remove("pressed");<br>
+  }, 100);<br>
+}<br>
 
-// in style.css
-.pressed {
-  box-shadow: 0 3px 4px 0 #dbedf3;
-  opacity: 0.5;
-}
+// in style.css<br>
+.pressed {<br>
+  box-shadow: 0 3px 4px 0 #dbedf3;<br>
+  opacity: 0.5;<br>
+}<br>
