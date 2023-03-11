@@ -280,3 +280,29 @@ function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
     }<br>
 }<br>
 houseKeeper3.clean();<br>
+
+
+<h3> Callback events & How to respont to Events</h3>
+
+function anotherEventListner (typeofEvent, callback){ <br>
+    
+    var eventThatHappened = { <br>
+        eventType: "keydown , <br>
+        keyThatPressed : "p", <br>
+        durationOfkey : 2 <br>
+    } <br>
+    
+    if(eventThatHappened.eventType === typeofEvent){ <br>
+        callback(eventThatHappened); <br>
+    } <br>
+} <br>
+undefined <br>  
+anotherEventListner("keydown", function(event){ <br>
+    console.log(event); <br>
+}); <br>
+VM812:2 {eventType: 'keydown', keyThatPressed: 'p', durationOfkey: 2}durationOfkey: 2eventType: "keydown"keyThatPressed: "p"[[Prototype]]: Object <br>
+undefined <br>
+debugger; <br>
+anotherEventListner("keydown", function(event){ <br>
+    console.log(event); <br>
+}); <br>
