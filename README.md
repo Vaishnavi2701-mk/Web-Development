@@ -307,6 +307,13 @@ anotherEventListner("keydown", function(event){ <br>
     console.log(event); <br>
 }); <br>
 
+<h3> Keyboard Event Listners </h3>
+document.addEventListener("keydown", function (event) {
+  playSound(event.key);
+  buttonAnimation(event.key);
+});
+
+
 <h3> Adding Animation to Buttons </h3>
 
 function buttonAnimation(currentkey) { <br>
