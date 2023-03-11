@@ -306,3 +306,23 @@ debugger; <br>
 anotherEventListner("keydown", function(event){ <br>
     console.log(event); <br>
 }); <br>
+
+<h3> Adding Animation to Buttons </h3>
+
+function buttonAnimation(currentkey) {
+// detecting current button
+  var activeButton = document.querySelector("." + currentkey); // .w or .a (we are using class to detect the current key)
+  // adding class pressed by classist
+  activeButton.classList.add("pressed");
+
+// going back to original condition after 1 sec by removing the same class
+  setTimeout(function () {
+    activeButton.classList.remove("pressed");
+  }, 100);
+}
+
+// in style.css
+.pressed {
+  box-shadow: 0 3px 4px 0 #dbedf3;
+  opacity: 0.5;
+}
