@@ -268,3 +268,15 @@ HouseKeeper {yearsOfExperience: 15, name: 'subh', cleaningReport: Array(3)}<br>
 
 houseKeeper2.name;<br>
 'shanti'<br>
+
+<h3> Methods in Javascript </h3><br>
+
+function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
+    this.yearsOfExperience=yearsOfExperience;<br>
+    this.name=name;<br>
+    this.cleaningReport=cleaningReport;<br>
+    this.clean = function(){<br>
+        alert("Cleaning in progress");<br>
+    }<br>
+}<br>
+houseKeeper3.clean();<br>
