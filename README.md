@@ -223,3 +223,116 @@ function drumRoll() {<br>
   alert("I got clicked!");<br>
 } */<br>
 
+<<<<<<< HEAD
+=======
+<h3> Javascript Objects </h3>
+
+var houseKeeper = { <br>
+    yearsOfExperience: 12,<br>
+    name: "Jane:",<br>
+    cleaningReport: ["bathroom", "lobby", "bedroom"]<br>
+}<br>
+undefined<br><br><br>
+
+console.log(houseKeeper.name);<br><br>
+Jane:<br>
+
+console.log(houseKeeper.yearsOfExperience);<br>
+ 12<br>
+ 
+ // Constuctor Fuction<br>
+ // Fuction Name should start with Capital letter (PascalCase)<br>
+ 
+ function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
+    this.yearsOfExperience=yearsOfExperience;<br>
+    this.name=name;<br>
+    this.cleaningReport=cleaningReport;<br>
+}<br>
+undefined<br>
+
+var houseKeeper1=new HouseKeeper(12,"Rani",["bathroom","bedroom","lobby"]);<br>
+undefined<br>
+
+houseKeeper1;<br>
+HouseKeeper {yearsOfExperience: 12, name: 'Rani', cleaningReport: Array(3)}<br>
+
+var houseKeeper2=new HouseKeeper(10,"shanti",["bathroom","bedroom","lobby"]);<br>
+undefined<br>
+
+var houseKeeper3=new HouseKeeper(15,"subh",["bathroom","bedroom","lobby"]);<br>
+undefined<br>
+
+houseKeeper2<br>
+HouseKeeper {yearsOfExperience: 10, name: 'shanti', cleaningReport: Array(3)}<br>
+
+houseKeeper3;<br>
+HouseKeeper {yearsOfExperience: 15, name: 'subh', cleaningReport: Array(3)}<br>
+
+houseKeeper2.name;<br>
+'shanti'<br>
+
+<h3> Methods in Javascript </h3><br>
+
+function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
+    this.yearsOfExperience=yearsOfExperience;<br>
+    this.name=name;<br>
+    this.cleaningReport=cleaningReport;<br>
+    this.clean = function(){<br>
+        alert("Cleaning in progress");<br>
+    }<br>
+}<br>
+houseKeeper3.clean();<br>
+
+
+<h3> Callback events & How to respont to Events</h3>
+
+function anotherEventListner (typeofEvent, callback){ <br>
+    
+    var eventThatHappened = { <br>
+        eventType: "keydown , <br>
+        keyThatPressed : "p", <br>
+        durationOfkey : 2 <br>
+    } <br>
+    
+    if(eventThatHappened.eventType === typeofEvent){ <br>
+        callback(eventThatHappened); <br>
+    } <br>
+} <br>
+undefined <br>  
+anotherEventListner("keydown", function(event){ <br>
+    console.log(event); <br>
+}); <br>
+VM812:2 {eventType: 'keydown', keyThatPressed: 'p', durationOfkey: 2}durationOfkey: 2eventType: "keydown"keyThatPressed: "p"[[Prototype]]: Object <br>
+undefined <br>
+debugger; <br>
+anotherEventListner("keydown", function(event){ <br>
+    console.log(event); <br>
+}); <br>
+
+<h3> Keyboard Event Listners </h3>
+document.addEventListener("keydown", function (event) {
+  playSound(event.key);
+  buttonAnimation(event.key);
+});
+
+
+<h3> Adding Animation to Buttons </h3>
+
+function buttonAnimation(currentkey) { <br>
+// detecting current button <br>
+  var activeButton = document.querySelector("." + currentkey); // .w or .a (we are using class to detect the current key)<br>
+  // adding class pressed by classist<br>
+  activeButton.classList.add("pressed");<br>
+
+// going back to original condition after 1 sec by removing the same class<br>
+  setTimeout(function () {<br>
+    activeButton.classList.remove("pressed");<br>
+  }, 100);<br>
+}<br>
+
+// in style.css<br>
+.pressed {<br>
+  box-shadow: 0 3px 4px 0 #dbedf3;<br>
+  opacity: 0.5;<br>
+}<br>
+>>>>>>> origin
