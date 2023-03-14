@@ -1,3 +1,11 @@
-body {
-  background-color: red;
+
+.big-heading {
+  font-size: 50px;
+  color: yellow;
+  font-family: cursive;
+}
+
+.margin {
+  margin-top: 50px;
+  margin-left: 50px;
 }
