@@ -22,6 +22,21 @@ Execution Context contains 2 things <strong> Memory (variable Environment) </str
 </ul>
 }
 
+<h1> Window Object </h1>
+
+Shortest code in JS is empty file, "window" is a globel object for globel execution context. <br>
+"this" keyword is similar to window; <br>
+this===window <br>
+=> true <br>
+
+eg: var x=27;<br>
+console.log(window.x);<br>
+console.log(this.x);<br>
+
+We cannot access the variables inside a function globally;<br>
+Javascript is loosly typed/ weekly typed language because variables are not attached with particular data type.<br>
+
+
 <h1> Call Stack </h1>
 
 Eveerything which is gona executed by javascript, importantly execution context is gonna stored inside call stack so synchronization would be maintained
@@ -209,28 +224,29 @@ console.log(calculator(2, 3, subtract));
 
 var buttonCount = document.querySelectorAll(".drum").length;<br>
 for (var i = 0; i < buttonCount; i++) {<br>
-  document.querySelectorAll(".drum")[i].addEventListener("click", function () {<br>
-    alert("I got clicked!");<br>
+document.querySelectorAll(".drum")[i].addEventListener("click", function () {<br>
+alert("I got clicked!");<br>
 
     // what to do when click <br>
-  });<br>
+
+});<br>
 }<br>
 
-/* document.querySelector("button").addEventListener("click", drumRoll); <br>
+/\* document.querySelector("button").addEventListener("click", drumRoll); <br>
 // when we use a function here we didn't add () because it will act first even before the event<br>
 
 function drumRoll() {<br>
-  alert("I got clicked!");<br>
-} */<br>
+alert("I got clicked!");<br>
+} \*/<br>
 
-<<<<<<< HEAD
-=======
+# <<<<<<< HEAD
+
 <h3> Javascript Objects </h3>
 
 var houseKeeper = { <br>
-    yearsOfExperience: 12,<br>
-    name: "Jane:",<br>
-    cleaningReport: ["bathroom", "lobby", "bedroom"]<br>
+yearsOfExperience: 12,<br>
+name: "Jane:",<br>
+cleaningReport: ["bathroom", "lobby", "bedroom"]<br>
 }<br>
 undefined<br><br><br>
 
@@ -238,15 +254,15 @@ console.log(houseKeeper.name);<br><br>
 Jane:<br>
 
 console.log(houseKeeper.yearsOfExperience);<br>
- 12<br>
- 
- // Constuctor Fuction<br>
- // Fuction Name should start with Capital letter (PascalCase)<br>
- 
- function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
-    this.yearsOfExperience=yearsOfExperience;<br>
-    this.name=name;<br>
-    this.cleaningReport=cleaningReport;<br>
+12<br>
+
+// Constuctor Fuction<br>
+// Fuction Name should start with Capital letter (PascalCase)<br>
+
+function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
+this.yearsOfExperience=yearsOfExperience;<br>
+this.name=name;<br>
+this.cleaningReport=cleaningReport;<br>
 }<br>
 undefined<br>
 
@@ -274,39 +290,39 @@ houseKeeper2.name;<br>
 <h3> Methods in Javascript </h3><br>
 
 function HouseKeeper (yearsOfExperience, name, cleaningReport){<br>
-    this.yearsOfExperience=yearsOfExperience;<br>
-    this.name=name;<br>
-    this.cleaningReport=cleaningReport;<br>
-    this.clean = function(){<br>
-        alert("Cleaning in progress");<br>
-    }<br>
+this.yearsOfExperience=yearsOfExperience;<br>
+this.name=name;<br>
+this.cleaningReport=cleaningReport;<br>
+this.clean = function(){<br>
+alert("Cleaning in progress");<br>
+}<br>
 }<br>
 houseKeeper3.clean();<br>
-
 
 <h3> Callback events & How to respont to Events</h3>
 
 function anotherEventListner (typeofEvent, callback){ <br>
-    
+
     var eventThatHappened = { <br>
         eventType: "keydown , <br>
         keyThatPressed : "p", <br>
         durationOfkey : 2 <br>
     } <br>
-    
+
     if(eventThatHappened.eventType === typeofEvent){ <br>
         callback(eventThatHappened); <br>
     } <br>
+
 } <br>
 undefined <br>  
 anotherEventListner("keydown", function(event){ <br>
-    console.log(event); <br>
+console.log(event); <br>
 }); <br>
 VM812:2 {eventType: 'keydown', keyThatPressed: 'p', durationOfkey: 2}durationOfkey: 2eventType: "keydown"keyThatPressed: "p"[[Prototype]]: Object <br>
 undefined <br>
 debugger; <br>
 anotherEventListner("keydown", function(event){ <br>
-    console.log(event); <br>
+console.log(event); <br>
 }); <br>
 
 <h3> Keyboard Event Listners </h3>
@@ -315,24 +331,24 @@ document.addEventListener("keydown", function (event) {
   buttonAnimation(event.key);
 });
 
-
 <h3> Adding Animation to Buttons </h3>
 
 function buttonAnimation(currentkey) { <br>
 // detecting current button <br>
-  var activeButton = document.querySelector("." + currentkey); // .w or .a (we are using class to detect the current key)<br>
-  // adding class pressed by classist<br>
-  activeButton.classList.add("pressed");<br>
+var activeButton = document.querySelector("." + currentkey); // .w or .a (we are using class to detect the current key)<br>
+// adding class pressed by classist<br>
+activeButton.classList.add("pressed");<br>
 
 // going back to original condition after 1 sec by removing the same class<br>
-  setTimeout(function () {<br>
-    activeButton.classList.remove("pressed");<br>
-  }, 100);<br>
+setTimeout(function () {<br>
+activeButton.classList.remove("pressed");<br>
+}, 100);<br>
 }<br>
 
 // in style.css<br>
 .pressed {<br>
-  box-shadow: 0 3px 4px 0 #dbedf3;<br>
-  opacity: 0.5;<br>
+box-shadow: 0 3px 4px 0 #dbedf3;<br>
+opacity: 0.5;<br>
 }<br>
->>>>>>> origin
+
+> > > > > > > origin
