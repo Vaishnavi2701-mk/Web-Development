@@ -24,6 +24,22 @@ function a() {
 }
 a();
 
+function outer() {
+  var ab = 10;
+  function inner() {
+    console.log(ab);
+  }
+  return inner;
+}
+
+console.log(outer()); // return inner function
+console.log(outer()()); // return 10;
+
+// instead we can do like;
+
+var output = outer();
+console.log(output()); // return 10;
+
 // Use of Closure
 
 // - Module Design Pattern
