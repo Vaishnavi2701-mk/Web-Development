@@ -36,7 +36,6 @@ console.log(this.x);<br>
 We cannot access the variables inside a function globally;<br>
 Javascript is loosly typed/ weekly typed language because variables are not attached with particular data type.<br>
 
-
 <h1> Call Stack </h1>
 
 Eveerything which is gona executed by javascript, importantly execution context is gonna stored inside call stack so synchronization would be maintained
@@ -350,5 +349,26 @@ activeButton.classList.remove("pressed");<br>
 box-shadow: 0 3px 4px 0 #dbedf3;<br>
 opacity: 0.5;<br>
 }<br>
+
+<h3> JS Engine </h3>
+
+<ul type="bullet">
+<li> Everything we wrote in JS happens inside JS Engine</li>
+<li> There is Callstack JS Engine </li>
+<li> Event Loop, API, Callback Queue, Microtask Queue exits outside of browser</li>
+<li> "SpiderMonkey" was a first JS Engine used by Firefox </li>
+<br>
+<li> Code </li>
+<li> Parsing -> Syntax Parser -> AST(Abstarct Syntax Tree) </li>
+<li> Compilation </li>
+<li> Execution </li>
+<li> Example of v8 Engine which is used by Google Chrome or Node JS</li>
+<li> JS Code->parsing->AST->Interpretor->Compiler->optimize->Byte Code->Interpretor</li>
+<li>v8</li>
+<li>Interpretor - Ignition</li>
+<li>Compiler - Turbofan</li>
+<li>Garbage Collector - Orinoco(M&S), oilpay</li>
+<li>Mark and Sweep Algorithm used for garbage collection for fast execution</li>
+</ul>
 
 > > > > > > > origin
