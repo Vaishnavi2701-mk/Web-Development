@@ -371,4 +371,4 @@ opacity: 0.5;<br>
 <li>Mark and Sweep Algorithm used for garbage collection for fast execution</li>
 </ul>
 
-> > > > > > > origin
+
