@@ -8,4 +8,3 @@
 6. Check if node.js installed by node -v. <br>
 7. npm init. <br>
 8. npm install gulp gulp-sass sass --save-dev. <br>
-9. 
