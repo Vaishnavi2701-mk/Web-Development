@@ -15,4 +15,5 @@
 <ul>
 <li>click on watch sass</li>
 <li>we can check it inside settings>live sass compiler</li>
+<li>It also checks for anomalies in terminal</li>
 </ul>
