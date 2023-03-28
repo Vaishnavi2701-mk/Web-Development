@@ -1,38 +1,38 @@
-// here we are styling triangle
+// here we are styling triangle </br>
+// In this way we can actually make css functional
+In .css </br>
 
-In .css
+.next{ </br>
+height: 0; </br>
+width: 0; </br>
+border-color: transprent; </br>
+border-style: solid; </br>
+border-width: 2.5px; </br>
+border-left-color: black; </br>
+} </br>
 
-.next{
-height: 0;
-width: 0;
-border-color: transprent;
-border-style: solid;
-border-width: 2.5px;
-border-left-color: black;
-}
+In .scss </br>
 
-In .scss
+@mixin triangle($size, $color, $direction){ </br>
+height: 0; </br>
+width: 0; </br>
+border-color: transprent; </br>
+border-style: solid; </br>
+border-width: $size/2; </br>
 
-@mixin triangle($size, $color, $direction){
-height: 0;
-width: 0;
-border-color: transprent;
-border-style: solid;
-border-width: $size/2;
+@if $direction == up{ </br>
+    border-bottom-color: $color; </br>
+} @else if $direction == right{ </br>
+    border-left-color: $color; </br>
+} @else if $direction == down{ </br>
+    border-top-color: $color; </br>
+} @else if $direction == left{ </br>
+    border-right-color: $color; </br>
+} @else{ </br>
+    @error "Unknown direction #($diection)."; </br>
+} </br>
+} </br>
 
-@if $direction == up{
-    border-bottom-color: $color;
-} @else if $direction == right{
-    border-left-color: $color;
-} @else if $direction == down{
-    border-top-color: $color;
-} @else if $direction == left{
-    border-right-color: $color;
-} @else{
-    @error "Unknown direction #($diection).";
-}
-}
-
-.next {
-@include triangle(5px, black, right);
-}
+.next { </br>
+@include triangle(5px, black, right); </br>
+} </br>
