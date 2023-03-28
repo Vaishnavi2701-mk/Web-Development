@@ -67,6 +67,8 @@ Sass works in such a way that when you write your styles in a .scss file, it get
 
 That is why it's called a Preprocessor.
 
+While linking it in html we have to link .css and not .scss because browser don't understand .scss we have to compile it in .css
+
 <h1> Why should you use Sass? </h1>
 
 Easy to learn: If you are familiar with CSS already, then you'll be glad to know that Sass actually has a similar syntax, and so you can start using it. 
