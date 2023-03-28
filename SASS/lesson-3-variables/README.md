@@ -4,10 +4,10 @@
 
 In .scss
 
-$font-family: Helvetica, sans-serif;
-$primary-color: #33345;
+$font-family: Helvetica, sans-serif;</br>
+$primary-color: #33345;</br>
 
-body{
-  font: $font-family;
-  color: $primary-color;
-}
+body{</br>
+  font: $font-family;</br>
+  color: $primary-color;</br>
+}</br>
