@@ -81,6 +81,8 @@ Organized Code: Sass helps keep your code organized by using partials.
 
 Cross Browser Compatibility: Sass gets compiled into CSS and adds all the necessary vendor prefixes so you don't have to worry about manually writing them out.
 
+We can also use operators.
+
 
 <h1> Ways to compile Sass </h1>
 
