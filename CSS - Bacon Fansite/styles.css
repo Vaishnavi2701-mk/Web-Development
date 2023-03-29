@@ -1,0 +1,45 @@
+/* This is how we comment in CSS */
+
+/* Always class seletors have preferance over others*/
+/***********************Tag Selectors*************************/
+h1 {
+    color: red;
+    font-size: 100px;
+}
+
+/* when I will set a background color property then it will change that color for evryone 
+   instaed we will make a class attribute and change as per required */
+
+img:hover{
+    height: 200px;
+    background-color: red;
+}
+
+
+/*************************Class Selectors****************************/
+
+.bacon{
+    height: 250px;
+    background-color: green;
+}
+
+.cake{
+    background-color: yellow;
+}
+
+.circular{
+    border-radius: 50%;
+}
+
+/***************************ID selectors*******************************/
+
+#heading{
+
+    color: blue;
+}
+/*<h1 id="heading big">I Love Bacon</h1>*/
+/*This will remove all the styling from h1 because it is not allowed*/
+#big{
+
+    font-size: 10000px;
+}

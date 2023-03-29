@@ -1,0 +1,38 @@
+body{
+   margin: 0;
+}
+/* Now conatiner becomes parent for all three squares */
+.container{
+  height: 500px;
+  width: 700px;
+  background-color: grey;
+}
+.top-position{
+   height: 200px;
+   width: 200px;
+   background-color: red;
+   position: absolute;
+   left: 400px;
+   top: 0px;
+   
+   
+}
+.middle-position{
+ height: 200px;
+ width: 200px;
+ background-color: blue;
+ position: absolute;
+ left: 200px;
+ top: 0px;
+ 
+ 
+ 
+}
+.bottom-position{
+ height: 200px;
+ width: 200px;
+ background-color: yellow;
+ position: fixed;
+ top: 0px;
+ 
+}
