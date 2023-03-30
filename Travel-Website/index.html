@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel.co</title>
+    <!-- font awesome cdn link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!--custom css link-->
+    <link rel="stylesheet" href="style.css" />
+    <!--favicon link-->
+    <link rel="stylesheet" href="favicon.ico" />
+  </head>
+  <body>
+    <!--header section starts-->
+    <header class="header">
+      <a href="#" class="logo"> <i class="fas fa-hiking"></i> travel.co</a>
+
+      <nav class="navbar">
+        <div id="nav-close" class="fas fa-times"></div>
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#shop">shop</a>
+        <a href="#packages">packages</a>
+        <a href="#reviews">reviews</a>
+        <a href="#blogs">blogs</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <div id="search-btn" class="fas fa-search"></div>
+      </div>
+    </header>
+
+    <!------------ Search form -------------->
+    <div class="search-form">
+      <div id="close-search" class="fas fa-times"></div>
+
+      <form action="">
+        <input
+          type="search"
+          name=""
+          placeholder="search here....."
+          id="search-box"
+        />
+        <label for="search-box" class="fas fa-search"></label>
+      </form>
+    </div>
+    <!------------ Search form ends! -------------->
+
+    <!------------ Home Section -------------->
+
+    <section class="home" id="home">
+      <div class="swiper home-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box" style="background: url() no-repeat;">
+              <div class="content">
+                <span>never stop</span>
+                <h3>exploring</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus minima cumque, 
+                   aut eum blanditiis eveniet cupiditate enim nobis corporis dolores ullam dolorum tempora quia, 
+                   magnam quam nulla at quod.</p>
+                <a href="#" class="btn">get started</div>
+              </div>
+            </div>
+          </div> 
+
+          <div class="swiper-slide">
+            <div class="box-second" style="background: url(images/bernardo-lorena-ponte-ddcbYY4tLyU-unsplash.jpg) no-repeat;">
+              <div class="content">
+                <span>make tour</span>
+                <h3>amazing</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus minima cumque, 
+                   aut eum blanditiis eveniet cupiditate enim nobis corporis dolores ullam dolorum tempora quia, 
+                   magnam quam nulla at quod.</p>
+                <a href="#" class="btn">get started</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="box-third" style="background: url(images/ammie-ngo-vcu-OZBxxRk-unsplash.jpg) no-repeat;">
+              <div class="content">
+                <span>explore the</span>
+                <h3>new world</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse repellendus minima cumque, 
+                   aut eum blanditiis eveniet cupiditate enim nobis corporis dolores ullam dolorum tempora quia, 
+                   magnam quam nulla at quod.</p>
+                <a href="#" class="btn">get started</div>
+              </div> 
+            </div>
+          </div>
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+      </div>
+    </section>
+
+    <!------------ Home Section ends! -------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
