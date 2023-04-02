@@ -593,6 +593,11 @@ section {
   color: #fff;
   padding: 1rem 0;
 }
+.footer .box-container .box a i {
+  color: #219150;
+  padding-right: 0.5rem;
+}
+
 /*---------------media queries---------------*/
 @media (max-width: 1200px) {
   .header {
