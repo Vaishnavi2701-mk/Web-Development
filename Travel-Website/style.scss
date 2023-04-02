@@ -688,18 +688,24 @@ section {
         color: $white;
       }
 
-      a{
+      a {
         display: block;
         font-size: 1.4rem;
         color: $white;
         padding: 1rem 0;
 
-        i{
+        i {
           color: $green;
-          padding-right: .5rem;
+          padding-right: 0.5rem;
         }
 
-        
+        &:hover {
+          color: $green;
+
+          i {
+            padding-right: 2rem;
+          }
+        }
       }
     }
   }

@@ -597,6 +597,12 @@ section {
   color: #219150;
   padding-right: 0.5rem;
 }
+.footer .box-container .box a:hover {
+  color: #219150;
+}
+.footer .box-container .box a:hover i {
+  padding-right: 2rem;
+}
 
 /*---------------media queries---------------*/
 @media (max-width: 1200px) {
