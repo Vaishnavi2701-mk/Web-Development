@@ -687,6 +687,17 @@ section {
         padding: 1.5rem 0;
         color: $white;
       }
+
+      a{
+        display: block;
+        font-size: 1.4rem;
+        color: $white;
+        padding: 1rem 0;
+
+        i{
+          
+        }
+      }
     }
   }
 }

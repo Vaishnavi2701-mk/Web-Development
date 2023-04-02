@@ -587,7 +587,12 @@ section {
   padding: 1.5rem 0;
   color: #fff;
 }
-
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 1rem 0;
+}
 /*---------------media queries---------------*/
 @media (max-width: 1200px) {
   .header {
