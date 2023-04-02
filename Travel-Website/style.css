@@ -611,6 +611,9 @@ section {
   font-size: 2rem;
   color: #fff;
 }
+.footer .credit span {
+  color: #219150;
+}
 
 /*---------------media queries---------------*/
 @media (max-width: 1200px) {
