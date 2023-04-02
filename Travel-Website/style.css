@@ -603,6 +603,14 @@ section {
 .footer .box-container .box a:hover i {
   padding-right: 2rem;
 }
+.footer .credit {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1rem;
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: #fff;
+}
 
 /*---------------media queries---------------*/
 @media (max-width: 1200px) {
