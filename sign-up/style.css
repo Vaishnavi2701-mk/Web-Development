@@ -113,7 +113,7 @@ header {
 }
 
 .wrapper .form-box.login {
-  transition: transform 0.18s ease;
+  transition-property: transform 0.18s ease;
   transform: translateX(0);
 }
 
