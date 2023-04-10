@@ -8,24 +8,24 @@ Node.JS : Javascript Runner : helps executing JS.
 
 <h1>Extensions and tools:</h1>
 
-<h4>React Developer Tools:</h4>
+<h3>React Developer Tools:</h3>
 
 It is google chrome extension which allow us to view react-component hierarchy in chrome developer tool.
 
 
-<h4>Thunder client:</h4>
+<h3>Thunder client:</h3>
 
 Alternative of postman where we can test out GET and POST request and check for API
 
 
-<h4>ES7/React/Redux/GraphQL/React-Native Snippets:</h4>
+<h3>ES7/React/Redux/GraphQL/React-Native Snippets:</h3>
 
 We can easily import react components
 
-<h4>Bracket Pair colorizer:</h4>
+<h3>Bracket Pair colorizer:</h3>
 
 It changes bracket color according to opening and closing of tags.
 
-<h4>Add Rename Tags:</h4>
+<h3>Add Rename Tags:</h3>
 
 Most of the customize tags gets automatic closing tag because of this !
