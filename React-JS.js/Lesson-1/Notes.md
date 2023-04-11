@@ -12,11 +12,9 @@ Node.JS : Javascript Runner : helps executing JS.
 
 It is google chrome extension which allow us to view react-component hierarchy in chrome developer tool.
 
-
 <h3>Thunder client:</h3>
 
 Alternative of postman where we can test out GET and POST request and check for API
-
 
 <h3>ES7/React/Redux/GraphQL/React-Native Snippets:</h3>
 
@@ -29,3 +27,4 @@ It changes bracket color according to opening and closing of tags.
 <h3>Add Rename Tags:</h3>
 
 Most of the customize tags gets automatic closing tag because of this !
+
