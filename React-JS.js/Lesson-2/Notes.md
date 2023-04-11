@@ -17,4 +17,4 @@ Form elements: states
 
                          React Components
                              /     \
-              Function Based         class based
+              Function Based         className based
