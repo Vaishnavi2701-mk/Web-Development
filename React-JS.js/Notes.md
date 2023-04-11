@@ -49,13 +49,47 @@ Form elements: states
                              /     \
               Function Based         className based
 
-
 <h1>JSX</h1>
 
 <p>JSX is a syntax extension for JavaScript that lets you write HTML-like markup inside a JavaScript file. Although there are other ways to write components, most React developers prefer the conciseness of JSX, and most codebases use it.</p>
 
 <h3>Rules for JSX</h3>
 
-1. Return a single root element 
+1. Return a single root element
 2. Close all tags
 3. camelCase most of teh things
+
+<h1> JS Export </h1>
+
+<p>There are two types of export
+   1. Default Export
+   2. Named Export </p>
+
+<p>Lets say we are making two files module1.mjs and module2.mjs
+
+<u>module1.mjs</u>
+
+import xyz, { a, c, d } from "./module2.mjs";
+
+console.log(xyz);
+console.log(a);
+console.log(c);
+console.log(d);
+
+<u>module2.mjs</u>
+
+const a = "Rohan";
+const b = "Priyanka";
+const c = "Shital";
+const d = "Vaishnavi";
+
+/_ It's a default export_/
+
+export default b;
+
+/_ It's a named export
+named components should export as it is and import as it is._/
+
+export {a};
+export {c};
+export {d};</p>
