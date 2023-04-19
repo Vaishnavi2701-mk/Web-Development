@@ -127,4 +127,13 @@ title : 'Set Title here', </br>
 aboutText: 'About text here' </br>
 }</br>
 
+<h1> Understanding state and handling events in React </h1>
+
+ const handleOnChange = (event) => {
+    //console.log("onChange");
+    setText(event.target.value);
+  };
+  
+  setText(event.target.value); ----> This function is then called with the event object as its argument, allowing it to access the current value of the input field using event.target.value. and then we can change a text.
+
 
