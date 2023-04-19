@@ -93,3 +93,38 @@ named components should export as it is and import as it is._/
 export {a};
 export {c};
 export {d};</p>
+
+<h1> Props </h1>
+<p> They are custom variables we pass toa components. It should be read only, we cannot chnage when it is fixed. </p>
+
+<h4> Component -> Navbar.js </h4>
+
+export default </br>
+function Navbar(props) </br>
+return { </br>
+{props.title} </br>
+{props.aboutText}  </br>
+} </br>
+
+<h4> Component -> App.js </h4>
+//<>
+<p> Navbar title = "textutils" aboutText = "About Textutils"  </p>
+//</>
+
+<h1> PropTypes </h1>
+
+import propTypes from "prop-types"; </br>
+
+Navbar.propTypes{ </br>
+title: propTypes.string.isRequired, </br>
+aboutText: propTypes.string.isRequired </br>
+} </br>
+
+// If propTypes have isRequired fields and we dont pass any inputs in props and we dont even have default then it will throw error!
+
+Navbar.defaultProps{ </br>
+title : 'Set Title here', </br>
+aboutText: 'About text here' </br>
+}</br>
+
+
