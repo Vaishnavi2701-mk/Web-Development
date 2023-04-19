@@ -106,7 +106,7 @@ return { </br>
 {props.aboutText}  </br>
 } </br>
 
-<h4> App.js </h4>
+<h4> App-js </h4>
 <p>  
 <Navbar title= "textutils" aboutText= "About Textutils" /> 
 </p>
