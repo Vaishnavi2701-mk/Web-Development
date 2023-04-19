@@ -13,11 +13,6 @@ export default function TextForm(props) {
     setText(newText);
   };
 
-  const handleClearClick = () => {
-    let newText = " ";
-    setText(newText);
-  };
-
   const speak = () => {
     let msg = new SpeechSynthesisUtterance();
     msg.text = text;
@@ -44,6 +39,22 @@ export default function TextForm(props) {
         setCount1(countConsonant);
       }
     }
+  };
+
+  const handleCopy = () => {
+    let text = document.getElementById("myBox");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  };
+
+  const handleExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
+  };
+
+  const handleClearClick = () => {
+    let newText = " ";
+    setText(newText);
   };
 
   const handleOnChange = (event) => {
@@ -77,9 +88,6 @@ export default function TextForm(props) {
       <button className="btn btn-primary mx-1" onClick={handleLoClick}>
         Convert to Lowercase
       </button>
-      <button className="btn btn-danger mx-1" onClick={handleClearClick}>
-        Clear Text
-      </button>
       <button className="btn btn-primary mx-1" onClick={speak}>
         Speak
       </button>
@@ -88,6 +96,15 @@ export default function TextForm(props) {
       </button>
       <button className="btn btn-primary mx-1" onClick={handleConsonants}>
         Count No. of consonants
+      </button>
+      <button className="btn btn-primary mx-1" onClick={handleCopy}>
+        Copy Text
+      </button>
+      <button className="btn btn-primary mx-1" onClick={handleExtraSpaces}>
+        Remove Extra Spaces
+      </button>
+      <button className="btn btn-danger mx-1" onClick={handleClearClick}>
+        Clear Text
       </button>
 
       <div className="my-3">
