@@ -108,12 +108,6 @@ return { </br>
 
 <h4> Component -> App.js </h4>
 
-<> </br>
-function Navbar(props) </br>
-return { </br>
-{props.title} </br>
-{props.aboutText}  </br>
-} </br>
 
 <h1> PropTypes </h1>
 
