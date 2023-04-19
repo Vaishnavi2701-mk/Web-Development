@@ -135,5 +135,18 @@ aboutText: 'About text here' </br>
   };
   
   setText(event.target.value); ----> This function is then called with the event object as its argument, allowing it to access the current value of the input field using event.target.value. and then we can change a text.
+  
+  
+<h1> React Hooks </h1>
 
+React Hooks are a set of functions that allow you to use state and other React features in functional components. Prior to the introduction of Hooks in React 16.8, state could only be managed in class components, which can be more complex and harder to read than functional components.
 
+React Hooks provide an alternative way to manage state and side effects (such as data fetching or event listeners) in functional components. They allow you to use React features such as state, context, and lifecycle methods without the need for class components.
+
+Some of the most commonly used React Hooks include:
+
+useState(): Allows you to add state to a functional component, and update that state in response to user actions or other events.
+useEffect(): Allows you to add side effects to a functional component, such as fetching data from an API, setting up event listeners, or updating the document title.
+useContext(): Allows you to access data stored in a context object, which can be used to pass data down the component tree without the need for props.
+useReducer(): Allows you to manage state using a reducer function, which can be helpful for more complex state management scenarios.
+Using Hooks can make your code simpler, more modular, and easier to test. They are widely used in modern React applications, and are a key part of writing reusable and maintainable code.
