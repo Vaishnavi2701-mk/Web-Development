@@ -107,9 +107,9 @@ return { </br>
 } </br>
 
 <h4> App.js </h4>
-<p> <> 
+<p>  
 <Navbar title= "textutils" aboutText= "About Textutils" /> 
-</> </p>
+</p>
 
 <h1> PropTypes </h1>
 
