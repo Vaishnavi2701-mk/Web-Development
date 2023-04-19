@@ -107,7 +107,7 @@ return { </br>
 } </br>
 
 <h4> Component -> App.js </h4>
-
+<> </>
 
 <h1> PropTypes </h1>
 
