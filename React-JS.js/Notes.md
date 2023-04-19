@@ -106,9 +106,9 @@ return { </br>
 {props.aboutText}  </br>
 } </br>
 
-<h4> Component -> Navbar.js </h4>
+<h4> Component -> App.js </h4>
 
-export default </br>
+<> </br>
 function Navbar(props) </br>
 return { </br>
 {props.title} </br>
