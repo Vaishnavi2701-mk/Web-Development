@@ -5,18 +5,21 @@ export default function TextForm(props) {
     //console.log("Uppercase was clicked " + text);
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Text converted to Uppercase!", "success");
   };
 
   const handleLoClick = () => {
     //console.log("Uppercase was clicked " + text);
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Text converted to Lowercase!", "success");
   };
 
   const speak = () => {
     let msg = new SpeechSynthesisUtterance();
     msg.text = text;
     window.speechSynthesis.speak(msg);
+    props.showAlert("Speech enabled!", "success");
   };
 
   const handleVowel = () => {
@@ -24,6 +27,7 @@ export default function TextForm(props) {
       if (text.charAt(count).match(/[aeiouAEIOU]/)) {
         countVowel++;
         setCount(countVowel);
+        props.showAlert("Vowels Counted!", "success");
       }
     }
   };
@@ -37,6 +41,7 @@ export default function TextForm(props) {
       ) {
         countConsonant++;
         setCount1(countConsonant);
+        props.showAlert("Consonants Counted!", "success");
       }
     }
   };
@@ -45,16 +50,19 @@ export default function TextForm(props) {
     let text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Copy to Clipboard!", "success");
   };
 
   const handleExtraSpaces = () => {
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Extra space removed!", "success");
   };
 
   const handleClearClick = () => {
     let newText = " ";
     setText(newText);
+    props.showAlert("Cleared Text!", "success");
   };
 
   const handleOnChange = (event) => {
