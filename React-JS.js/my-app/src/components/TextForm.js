@@ -71,13 +71,22 @@ export default function TextForm(props) {
   // text = "new text"; wrong method to change a text
   // setText("new text"); right way to change a text
   return (
-    <div>
+    <div
+      className="container"
+      style={{
+        color: props.mode === "light" ? "black" : "white",
+      }}
+    >
       <h1>{props.heading}</h1>
       <div className="mb-3">
         <textarea
           className="form-control"
           value={text}
           onChange={handleOnChange}
+          style={{
+            background: props.mode === "dark" ? "#04203c" : "white",
+            color: props.mode === "dark" ? "white" : "#04203c",
+          }}
           id="myBox"
           rows="8"
         ></textarea>
@@ -107,7 +116,12 @@ export default function TextForm(props) {
         Clear Text
       </button>
 
-      <div className="my-3">
+      <div
+        className="my-3"
+        style={{
+          color: props.mode === "light" ? "black" : "white",
+        }}
+      >
         <h1>Your text summary</h1>
         <p>
           {text.split(" ").length} words, {text.length} characters and {count}{" "}
@@ -116,7 +130,11 @@ export default function TextForm(props) {
         <p>It takes {0.008 * text.split(" ").length} minutes to read. </p>
 
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>
+          {text.length > 0
+            ? text
+            : "Enter something in textbox to preview it here!"}
+        </p>
       </div>
     </div>
   );
