@@ -12,7 +12,7 @@ export default function Alert(props) {
         className={`alert alert-${props.alert.type} d-flex align-items-center`}
         role="alert"
       >
-        <strong>{capitalize(props.alert.type)}</strong>:{props.alert.msg}
+        <strong>{capitalize(props.alert.type)}</strong>: {props.alert.msg}
       </div>
     )
   );
