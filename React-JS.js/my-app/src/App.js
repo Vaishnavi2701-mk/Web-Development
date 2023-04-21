@@ -44,15 +44,21 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+        <Navbar
+          title="TextUtils"
+          aboutText="About"
+          mode={mode}
+          toggleMode={toggleMode}
+        />
         <Alert alert={alert} />
         <div className="container my-3">
           {/* /user --> component-1
         /user/home --> component-2
         This will lead to confusion if we dont add exact! */}
           <Routes>
-            <Route path="/about" element={<About />} />
+            <Route exact path="/about" element={<About />} />
             <Route
+              exact
               path="/"
               element={
                 <TextForm
