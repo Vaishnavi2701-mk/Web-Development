@@ -1,9 +1,8 @@
 import "./App.css";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
-// import About from "./components/About";
+import About from "./components/About";
 import TextForm from "./components/TextForm";
-
 import React, { useState } from "react";
 
 function App() {
@@ -45,10 +44,10 @@ function App() {
       <Navbar title="TextUtilites" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <TextForm heading="Enter your text here!" mode={mode} />
+        {/* /user --> component-1
+        /user/home --> component-2
+        This will lead to confusion if we dont add exact! */}
       </div>
-
-      {/* <About /> */}
     </>
   );
 }
