@@ -2,7 +2,7 @@ import "./App.css";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-import TextForm from "./components/TextForm";
+// import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 
 function App() {
@@ -41,7 +41,6 @@ function App() {
 
   return (
     <>
-      <Router>
         <Navbar title="TextUtilites" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
@@ -49,10 +48,9 @@ function App() {
         /user/home --> component-2
         This will lead to confusion if we dont add exact! */}
 
-          <TextForm heading="Enter your text here!" mode={mode} />
-          <About />
+          {/* <TextForm heading="Enter your text here!" mode={mode} /> */}
+          <About/>
         </div>
-      </Router>
     </>
   );
 }
