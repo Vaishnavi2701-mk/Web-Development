@@ -1,9 +1,11 @@
 import "./App.css";
+import React, { useState } from "react";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import About from "./components/About";
-// import TextForm from "./components/TextForm";
-import React, { useState } from "react";
+import TextForm from "./components/TextForm";
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState("light");
@@ -41,16 +43,27 @@ function App() {
 
   return (
     <>
-        <Navbar title="TextUtilites" mode={mode} toggleMode={toggleMode} />
+      <Router>
+        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
           {/* /user --> component-1
         /user/home --> component-2
         This will lead to confusion if we dont add exact! */}
-
-          {/* <TextForm heading="Enter your text here!" mode={mode} /> */}
-          <About/>
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route
+              path="/"
+              element={
+                <TextForm
+                  heading="Enter the text to analyze below"
+                  onShowAlert={showAlert}
+                />
+              }
+            />
+          </Routes>
         </div>
+      </Router>
     </>
   );
 }
