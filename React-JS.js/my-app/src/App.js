@@ -41,13 +41,18 @@ function App() {
 
   return (
     <>
-      <Navbar title="TextUtilites" mode={mode} toggleMode={toggleMode} />
-      <Alert alert={alert} />
-      <div className="container my-3">
-        {/* /user --> component-1
+      <Router>
+        <Navbar title="TextUtilites" mode={mode} toggleMode={toggleMode} />
+        <Alert alert={alert} />
+        <div className="container my-3">
+          {/* /user --> component-1
         /user/home --> component-2
         This will lead to confusion if we dont add exact! */}
-      </div>
+
+          <TextForm heading="Enter your text here!" mode={mode} />
+          <About />
+        </div>
+      </Router>
     </>
   );
 }
