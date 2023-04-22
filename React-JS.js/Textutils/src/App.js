@@ -62,6 +62,7 @@ function App() {
               <TextForm
                 heading="Enter the text to analyze below"
                 showAlert={showAlert}
+                mode={mode}
               />
             }
           />

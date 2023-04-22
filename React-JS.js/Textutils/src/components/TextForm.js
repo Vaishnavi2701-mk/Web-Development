@@ -84,7 +84,7 @@ export default function TextForm(props) {
         className="container"
         style={{
           // backgroundColor: props.mode === "dark" ? "grey" : "white",
-          color: props.mode === "dark" ? "white" : "#04203c",
+          color: props.mode === "light" ? "black" : "white",
         }}
       >
         <h1>{props.heading}</h1>
