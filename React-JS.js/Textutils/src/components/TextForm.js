@@ -80,17 +80,19 @@ export default function TextForm(props) {
   // setText("new text"); right way to change a text
   return (
     <>
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          backgroundColor: props.mode === "dark" ? "grey" : "white",
+          color: props.mode === "dark" ? "white" : "#04203c",
+        }}
+      >
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
             value={text}
             onChange={handleOnChange}
-            style={{
-              backgroundColor: props.mode === "dark" ? "grey" : "white",
-              color: props.mode === "dark" ? "white" : "#04203c",
-            }}
             id="myBox"
             rows="8"
           ></textarea>
@@ -126,12 +128,7 @@ export default function TextForm(props) {
           Clear Text
         </button>
 
-        <div
-          className="my-3"
-          style={{
-            color: props.mode === "light" ? "black" : "white",
-          }}
-        >
+        <div className="my-3">
           <h1>Your text summary</h1>
           <p>
             {
