@@ -2,10 +2,10 @@ import "./App.css";
 import React, { useState } from "react";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
-// import About from "./components/About";
+import About from "./components/About";
 import TextForm from "./components/TextForm";
 
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState("light");
@@ -42,49 +42,32 @@ function App() {
   };
 
   return (
-    <>
+    <Router>
       <Navbar
         title="TextUtils"
+        aboutText="About"
         mode={mode}
         toggleMode={toggleMode}
       />
       <Alert alert={alert} />
       <div className="container my-3">
-        <TextForm
-          heading="Enter the text to analyze below"
-          showAlert={showAlert}
-          mode={mode}
-        />
+        {/* /user --> component-1 /user/home --> component-2 This will lead to
+        confusion if we dont add exact! */}
+        <Routes>
+          <Route exact path="/about" element={<About mode={mode} />} />
+          <Route
+            exact
+            path="/"
+            element={
+              <TextForm
+                heading="Enter the text to analyze below"
+                showAlert={showAlert}
+              />
+            }
+          />
+        </Routes>
       </div>
-    </>
-
-    // {/* <Router>
-    //   <Navbar
-    //     title="TextUtils"
-    //     aboutText="About"
-    //     mode={mode}
-    //     toggleMode={toggleMode}
-    //   />
-    //   <Alert alert={alert} />
-    //   <div className="container my-3">
-    //     /user --> component-1
-    //   /user/home --> component-2
-    //   This will lead to confusion if we dont add exact!
-    //     <Routes>
-    //       <Route exact path="/about" element={<About />} />
-    //       <Route
-    //         exact
-    //         path="/"
-    //         element={
-    //           <TextForm
-    //             heading="Enter the text to analyze below"
-    //             onShowAlert={showAlert}
-    //           />
-    //         }
-    //       />
-    //     </Routes>
-    //   </div>
-    // </Router> */}
+    </Router>
   );
 }
 
