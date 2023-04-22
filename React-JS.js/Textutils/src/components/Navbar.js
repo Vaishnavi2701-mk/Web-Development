@@ -34,17 +34,31 @@ export default function Navbar(props) {
               </Link>
             </li>
           </ul>
-          {/* <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-primary" type="submit">
-              Search
-            </button>
-          </form> */}
+          <div className="d-flex">
+            <div
+              className="btn-primary rounded mx-2"
+              onClick={() => props.toggleMode("primary")}
+              style={{ height: "20px", width: "20px", cursor: "pointer" }}
+            ></div>
+
+            <div
+              className="btn-danger rounded mx-2"
+              onClick={() => props.toggleMode("danger")}
+              style={{ height: "20px", width: "20px", cursor: "pointer" }}
+            ></div>
+
+            <div
+              className="btn-success rounded mx-2"
+              onClick={() => props.toggleMode("success")}
+              style={{ height: "20px", width: "20px", cursor: "pointer" }}
+            ></div>
+
+            <div
+              className="btn-warning rounded mx-2"
+              onClick={() => props.toggleMode("warning")}
+              style={{ height: "20px", width: "20px", cursor: "pointer" }}
+            ></div>
+          </div>
 
           <div
             className={`form-check form-switch text-${
@@ -54,7 +68,7 @@ export default function Navbar(props) {
             <input
               className="form-check-input"
               type="checkbox"
-              onClick={props.toggleMode}
+              onClick={props.toggleMode(null)}
               role="switch"
               id="flexSwitchCheckDefault"
             />
@@ -62,7 +76,7 @@ export default function Navbar(props) {
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
             >
-              Enable Dark Mode
+              Toggle Mode
             </label>
           </div>
         </div>
