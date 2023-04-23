@@ -168,3 +168,15 @@ Running tests: The build script may run automated tests to ensure that your appl
 Creating a production-ready version: The build script may create a folder with all the files necessary to deploy your application or library to a web server. This folder typically includes the compiled and optimized code, as well as any necessary configuration files.
 
 In general, running npm run build is an important step in preparing your web application or library for deployment to a production environment.
+
+<h1> Main difference between 'npm create-react-app my-app' and 'npx create-react-app my-app' </h1>
+
+Both npm create-react-app and npx create-react-app are commands that can be used to create a new React application.
+
+The main difference between the two is in how they are executed:
+
+npm create-react-app is used when you have already installed create-react-app globally on your system using npm install -g create-react-app. When you run npm create-react-app, it will use the globally installed version of create-react-app to generate a new React application in your current working directory.
+
+npx create-react-app is used when you do not have create-react-app installed globally on your system. When you run npx create-react-app, it will download the latest version of create-react-app from the npm registry and use it to generate a new React application in your current working directory. This means that you do not need to install create-react-app globally beforehand, which can be convenient if you only need to generate a new React application once or infrequently.
+
+In summary, if you have already installed create-react-app globally on your system, you can use npm create-react-app to generate a new React application. If you do not have create-react-app installed globally, you can use npx create-react-app to download and use the latest version of create-react-app to generate a new React application.
