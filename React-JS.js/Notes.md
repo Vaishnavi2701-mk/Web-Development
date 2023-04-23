@@ -205,3 +205,33 @@ They can be more performant: Function-based components can be optimized to be mo
 They work well with hooks: Function-based components are the recommended way to use hooks, which are a powerful feature in React that allow you to add state and other React features to function-based components.
 
 Overall, function-based components are a powerful and useful feature in React that can simplify your code and improve performance.
+
+
+<h1> Class based component </h1>
+
+Class-based components are a type of component in React that are defined using JavaScript classes. They have been used in React since its inception and were the primary way to define components in React before the introduction of function-based components.
+
+Here's an example of a simple class-based component:
+
+jsx
+Copy code
+import React, { Component } from 'react';
+
+class Greeting extends Component {
+  render() {
+    return h1 Hello, {this.props.name}! h1;
+  }
+}
+In this example, the Greeting component extends the Component class from React and defines a render method that returns an h1 element with the text "Hello, {name}!".
+
+Class-based components have a few key features:
+
+They have a state: Class-based components can define a state that can be updated using setState, which triggers a re-render of the component.
+
+They have lifecycle methods: Class-based components have lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount that can be used to perform side effects like fetching data or cleaning up resources.
+
+They can use props and context: Class-based components can access props passed down from a parent component and can also access the React context.
+
+However, with the introduction of the Hooks API in React 16.8, function-based components have become the recommended way to define components in most cases. Function-based components are simpler and easier to read than class-based components, and can also be more performant.
+
+Overall, while class-based components are still a useful and important feature in React, they are becoming less common in favor of function-based components and hooks.
