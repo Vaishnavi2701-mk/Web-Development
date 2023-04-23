@@ -150,3 +150,21 @@ useEffect(): Allows you to add side effects to a functional component, such as f
 useContext(): Allows you to access data stored in a context object, which can be used to pass data down the component tree without the need for props.
 useReducer(): Allows you to manage state using a reducer function, which can be helpful for more complex state management scenarios.
 Using Hooks can make your code simpler, more modular, and easier to test. They are widely used in modern React applications, and are a key part of writing reusable and maintainable code.
+
+<h1> Why we use 'npm run build' </h1>
+
+This command is often used in web development projects that use JavaScript, HTML, and CSS.
+
+When you run npm run build, it typically executes a build script that is defined in the package.json file of your project. The build script is responsible for creating a production-ready version of your web application or library.
+
+Here are some common tasks that a build script might perform:
+
+Compiling and bundling code: The build script may use tools like webpack or rollup to bundle all of your JavaScript files into a single file. It may also compile other files like CSS, SCSS, or TypeScript into their respective formats.
+
+Optimizing assets: The build script may optimize your images or fonts to reduce their file size and improve load times.
+
+Running tests: The build script may run automated tests to ensure that your application or library is working correctly.
+
+Creating a production-ready version: The build script may create a folder with all the files necessary to deploy your application or library to a web server. This folder typically includes the compiled and optimized code, as well as any necessary configuration files.
+
+In general, running npm run build is an important step in preparing your web application or library for deployment to a production environment.
