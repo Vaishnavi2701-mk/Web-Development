@@ -192,7 +192,7 @@ Copy code
 import React from 'react';
 
 function Greeting(props) {
-  return <h1>Hello, {props.name}!</h1>;
+  return "<h1>Hello, {props.name}!</h1>";
 }
 In this example, the Greeting component takes in a name prop and returns an h1 element with the text "Hello, {name}!".
 
