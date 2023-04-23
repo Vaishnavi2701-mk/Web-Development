@@ -180,3 +180,28 @@ npm create-react-app is used when you have already installed create-react-app gl
 npx create-react-app is used when you do not have create-react-app installed globally on your system. When you run npx create-react-app, it will download the latest version of create-react-app from the npm registry and use it to generate a new React application in your current working directory. This means that you do not need to install create-react-app globally beforehand, which can be convenient if you only need to generate a new React application once or infrequently.
 
 In summary, if you have already installed create-react-app globally on your system, you can use npm create-react-app to generate a new React application. If you do not have create-react-app installed globally, you can use npx create-react-app to download and use the latest version of create-react-app to generate a new React application.
+
+<h1> Function based Components </h1>
+
+Function-based components are a type of component in React that are defined using JavaScript functions. They are also commonly referred to as "functional components". Function-based components were introduced in React 16.8 as part of the Hooks API.
+
+Here's an example of a simple function-based component:
+
+jsx
+Copy code
+import React from 'react';
+
+function Greeting(props) {
+  return <h1>Hello, {props.name}!</h1>;
+}
+In this example, the Greeting component takes in a name prop and returns an h1 element with the text "Hello, {name}!".
+
+Function-based components have a few key features:
+
+They are simple and easy to read: Since they are just JavaScript functions, they tend to be more concise and easier to understand than class-based components.
+
+They can be more performant: Function-based components can be optimized to be more performant than class-based components because they do not have the overhead of a class instance.
+
+They work well with hooks: Function-based components are the recommended way to use hooks, which are a powerful feature in React that allow you to add state and other React features to function-based components.
+
+Overall, function-based components are a powerful and useful feature in React that can simplify your code and improve performance.
