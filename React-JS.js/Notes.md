@@ -296,3 +296,37 @@ Unmounting phase:
 componentWillUnmount(): This method is called immediately before the component is removed from the DOM. It is used to perform any necessary cleanup, such as removing event listeners or canceling network requests.
 In addition to these methods, there are also some less commonly used lifecycle methods, such as getDerivedStateFromProps() and getSnapshotBeforeUpdate(). However, the methods listed above are the most commonly used and should cover most use cases.
 
+
+<h1> componentDidMount - lifecycle method </h1>
+
+componentDidMount is a lifecycle method in class-based components in React. It is invoked immediately after a component is mounted (i.e., inserted into the DOM tree).
+
+You can use this method to perform any necessary setup, such as fetching data from a remote server, initializing a library or framework, or setting up event listeners.
+
+Here's an example of how componentDidMount might be used:
+
+javascript
+Copy code
+class MyComponent extends React.Component {
+  componentDidMount() {
+    // fetch data from server
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => {
+        // set state with fetched data
+        this.setState({ data: data });
+      });
+  }
+
+  render() {
+    // render component with fetched data
+    return (
+      <div>
+        <h1>{this.state.data.title}</h1>
+        <p>{this.state.data.body}</p>
+      </div>
+    );
+  }
+}
+In this example, componentDidMount fetches data from a server and updates the component's state with the fetched data. The render method then uses the state to render the component with the fetched data.
+
