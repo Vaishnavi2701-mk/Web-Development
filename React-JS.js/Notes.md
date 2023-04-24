@@ -235,3 +235,38 @@ They can use props and context: Class-based components can access props passed d
 However, with the introduction of the Hooks API in React 16.8, function-based components have become the recommended way to define components in most cases. Function-based components are simpler and easier to read than class-based components, and can also be more performant.
 
 Overall, while class-based components are still a useful and important feature in React, they are becoming less common in favor of function-based components and hooks.
+
+<h1> State in class-based components </h1>
+
+In React, class-based components are a way to create reusable UI components with their own state and lifecycle methods. Here's an example of how to define a class-based component in React:
+
+javascript
+Copy code
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  handleClick = () => {
+    this.setState({ count: this.state.count + 1 });
+  }
+
+ render() {
+    return (
+      <div>
+        <h1>My Component</h1>
+        <p>Count: {this.state.count}</p>
+        <button onClick={this.handleClick}>Click me</button>
+      </div>
+    );
+  }
+}
+
+export default MyComponent;
+
+state is defines as this.state inside super constructor and then it can be set as this.setState inside a function.
