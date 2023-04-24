@@ -306,7 +306,7 @@ You can use this method to perform any necessary setup, such as fetching data fr
 Here's an example of how componentDidMount might be used:
 
 javascript
-Copy code
+</br>
 class MyComponent extends React.Component {
   componentDidMount() {
     // fetch data from server
