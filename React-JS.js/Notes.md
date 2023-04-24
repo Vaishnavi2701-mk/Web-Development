@@ -270,3 +270,63 @@ class MyComponent extends Component {
 export default MyComponent;
 
 state is defines as this.state inside super constructor and then it can be set as this.setState inside a function.
+
+<h1> Lifecycle Methods in Class Based Components </h1>
+
+Lifecycle methods are methods that are called at specific points during the life cycle of a React component. In class-based components, these methods are defined as class methods.
+
+There are three main phases of the React component life cycle:
+
+Mounting: This is when the component is first created and inserted into the DOM.
+Updating: This is when the component's props or state change and it needs to re-render.
+Unmounting: This is when the component is removed from the DOM.
+Here are the lifecycle methods in React class-based components, grouped by the phase in which they are called:
+
+Mounting phase:
+
+constructor(): This is the first method that is called when a component is created. It is used to initialize the component's state and bind methods.
+render(): This method is required and is used to create and return the component's virtual DOM representation.
+componentDidMount(): This method is called immediately after the component has been inserted into the DOM. It is used to perform any necessary setup, such as fetching data from a server or initializing third-party libraries.
+Updating phase:
+
+shouldComponentUpdate(): This method is called before the component is updated, and it can be used to optimize performance by preventing unnecessary re-renders.
+componentDidUpdate(): This method is called immediately after the component has been updated. It is used to perform any necessary post-update operations, such as updating the DOM or fetching new data from a server.
+Unmounting phase:
+
+componentWillUnmount(): This method is called immediately before the component is removed from the DOM. It is used to perform any necessary cleanup, such as removing event listeners or canceling network requests.
+In addition to these methods, there are also some less commonly used lifecycle methods, such as getDerivedStateFromProps() and getSnapshotBeforeUpdate(). However, the methods listed above are the most commonly used and should cover most use cases.
+
+
+<h1> componentDidMount - lifecycle method </h1>
+
+componentDidMount is a lifecycle method in class-based components in React. It is invoked immediately after a component is mounted (i.e., inserted into the DOM tree).
+
+You can use this method to perform any necessary setup, such as fetching data from a remote server, initializing a library or framework, or setting up event listeners.
+
+Here's an example of how componentDidMount might be used:
+
+javascript
+</br>
+class MyComponent extends React.Component {
+  componentDidMount() {
+    // fetch data from server
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => {
+        // set state with fetched data
+        this.setState({ data: data });
+      });
+  }
+
+  render() {
+    // render component with fetched data
+    return (
+      <div>
+        h1{this.state.data.title}/h1
+        <p>{this.state.data.body}</p>
+      </div>
+    );
+  }
+}
+In this example, componentDidMount fetches data from a server and updates the component's state with the fetched data. The render method then uses the state to render the component with the fetched data.
+
