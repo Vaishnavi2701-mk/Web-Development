@@ -259,7 +259,7 @@ class MyComponent extends Component {
  render() {
     return (
       <div>
-        <h1>My Component</h1>
+        h1 My Component /h1
         <p>Count: {this.state.count}</p>
         <button onClick={this.handleClick}>Click me</button>
       </div>
