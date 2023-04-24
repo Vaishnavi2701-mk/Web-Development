@@ -42,9 +42,10 @@ export default class News extends Component {
         "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
       publishedAt: "2020-03-30T15:26:05Z",
       content:
-        "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classNameic cricket match. We knew the result, yes, but we tried… [+6823 chars]",
+        "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]",
     },
   ];
+
   constructor() {
     super();
     console.log("Hello I am a constructor!");
@@ -53,17 +54,33 @@ export default class News extends Component {
       loading: false,
     };
   }
+
+  async componentDidMount() {
+    try {
+      let url =
+        "https://newsapi.org/v2/top-headlines?country=in&apiKey=39d9f8338db24e769f33a41a7c849434";
+      const res = await fetch(url);
+      const data = await res.json();
+      this.setState({
+        articles: data.articles,
+      });
+    } catch (e) {
+      console.log("something is not working");
+    }
+  }
+
   render() {
+    console.log("I am a render");
     return (
       <div className="container my-3">
         <h1>NewsMonkey - Top Headlines</h1>
         <div className="row">
           {this.state.articals.map((element) => {
             return (
-              <div className="col-md-4">
+              <div className="col-md-4" key={element.url}>
                 <NewsItem
-                  title={element.title.slice(0, 45)}
-                  description={element.description.slice(0, 88)}
+                  title={element ? element.title.slice(0, 45) : " "}
+                  description={element ? element.description.slice(0, 88) : " "}
                   imageUrl={element.urlToImage}
                   newsUrl={element.url}
                 />
