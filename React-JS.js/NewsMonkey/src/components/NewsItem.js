@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class NewsItem extends Component {
+export class NewsItem extends Component {
   render() {
     let { title, description, imageUrl, newsUrl } = this.props;
     return (
@@ -9,17 +9,22 @@ export default class NewsItem extends Component {
           <img
             src={
               !imageUrl
-                ? "https://www.aljazeera.com/wp-content/uploads/2023/04/2023-04-21T205655Z_826655361_UP1EJ4L1M6UDH_RTRMADP_3_SOCCER-ENGLAND-ARS-SOU-REPORT-1682156630.jpg?resize=1920%2C1411"
+                ? "https://fdn.gsmarena.com/imgroot/news/21/08/xiaomi-smart-home-india-annoucnements/-476x249w4/gsmarena_00.jpg"
                 : imageUrl
             }
             className="card-img-top"
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">{title}...</h5>
-            <p className="card-text">{description}...</p>
-            <a href={newsUrl} className="btn btn-primary">
-              Read more
+            <h5 className="card-title">{title}</h5>
+            <p className="card-text">{description}</p>
+            <a
+              rel="noreferrer"
+              href={newsUrl}
+              target="_blank"
+              className="btn btn-sm btn-dark"
+            >
+              Read More
             </a>
           </div>
         </div>
@@ -27,3 +32,5 @@ export default class NewsItem extends Component {
     );
   }
 }
+
+export default NewsItem;
