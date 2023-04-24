@@ -322,7 +322,7 @@ class MyComponent extends React.Component {
     // render component with fetched data
     return (
       <div>
-        <h1>{this.state.data.title}</h1>
+        h1{this.state.data.title}/h1
         <p>{this.state.data.body}</p>
       </div>
     );
