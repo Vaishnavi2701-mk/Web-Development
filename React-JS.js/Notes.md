@@ -270,3 +270,6 @@ class MyComponent extends Component {
 export default MyComponent;
 
 state is defines as this.state inside super constructor and then it can be set as this.setState inside a function.
+
+<h1> Lifecycle Methods in Class Based Components </h1>
+
