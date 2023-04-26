@@ -21,7 +21,7 @@ export class NewsItem extends Component {
               {title}{" "}
               <span
                 class="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
-                style={{ left: "85%", zIndex: "1" }}
+                style={{ left: "88%", zIndex: "1" }}
               >
                 {source}
               </span>
