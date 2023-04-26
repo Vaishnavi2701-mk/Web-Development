@@ -66,10 +66,15 @@ export class News extends Component {
           NewsMonkey - Top {this.capitalizeFirstLetter(this.props.category)}{" "}
           Headlines
         </h1>
-        {this.state.loading && <Spinner />}
-        <div className="row">
-          {!this.state.loading &&
-            this.state.articles.map((element) => {
+        {/* {this.state.loading && <Spinner />} */}
+        <InfiniteScroll
+          dataLength={this.state.articles.length}
+          next={this.fetchMoreData}
+          hasMore={this.state.articles.length !== this.totalResults}
+          loader={<h4>Loading...</h4>}
+        >
+          <div className="row">
+            {this.state.articles.map((element) => {
               return (
                 <div className="col-md-4" key={element.url}>
                   <NewsItem
@@ -84,7 +89,8 @@ export class News extends Component {
                 </div>
               );
             })}
-        </div>
+          </div>
+        </InfiniteScroll>
         <div className="container d-flex justify-content-between">
           <button
             disabled={this.state.page <= 1}
