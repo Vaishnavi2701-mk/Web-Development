@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
 import PropTypes from "prop-types";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 export class News extends Component {
   static defaultProps = {
@@ -26,6 +27,7 @@ export class News extends Component {
       articles: [],
       loading: false,
       page: 1,
+      totalResults: 0,
     };
     document.title = `${this.capitalizeFirstLetter(
       this.props.category
@@ -70,8 +72,8 @@ export class News extends Component {
         <InfiniteScroll
           dataLength={this.state.articles.length}
           next={this.fetchMoreData}
-          hasMore={this.state.articles.length !== this.totalResults}
-          loader={<h4>Loading...</h4>}
+          hasMore={this.state.articles.length !== this.state.totalResults}
+          loader={<Spinner />}
         >
           <div className="row">
             {this.state.articles.map((element) => {
