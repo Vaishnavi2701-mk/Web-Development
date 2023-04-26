@@ -19,7 +19,10 @@ export class NewsItem extends Component {
           <div className="card-body">
             <h5 className="card-title">
               {title}{" "}
-              <span class="position-absolute top-0 translate-middle badge rounded-pill bg-danger">
+              <span
+                class="position-absolute top-0 translate-middle badge rounded-pill bg-danger"
+                style={{ left: "85%", zIndex: "1" }}
+              >
                 {source}
               </span>
             </h5>
