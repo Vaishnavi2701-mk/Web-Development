@@ -12,7 +12,7 @@ const News = (props) => {
   // };
 
   // static propTypes = {
-  //   country: PropTypes.stringś
+  //   country: PropTypes.string,
   //   pageSize: PropTypes.number,
   //   category: PropTypes.string,
   // };
@@ -59,18 +59,24 @@ const News = (props) => {
 
   useEffect(() => {
     updateNews();
+    // To avoid warning
+    //eslint-disable-next-line
   }, []);
 
   // async componentDidMount() {
   //   this.updateNews();
   // }
 
+  // To avoid warning
+  //eslint-disable-next-line
   const handlePrevClick = async () => {
     setPage(page - 1);
     // this.setState({ page: this.state.page - 1 });
     updateNews();
   };
 
+  // To avoid warning
+  //eslint-disable-next-line
   const handleNextClick = async () => {
     setPage(page + 1);
     // this.setState({ page: this.state.page + 1 });
@@ -80,7 +86,11 @@ const News = (props) => {
   const fetchMoreData = async () => {
     setPage(page + 1);
     // this.setState({ page: this.state.page + 1 });
-    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}=${page}&pageSize=${props.pageSize}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${
+      props.country
+    }&category=${props.category}&apiKey=${props.apiKey}=${page + 1}&pageSize=${
+      props.pageSize
+    }`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(articles.concat(parsedData.articles));
@@ -93,7 +103,10 @@ const News = (props) => {
 
   return (
     <>
-      <h1 className="text-center" style={{ margin: "35px 0px" }}>
+      <h1
+        className="text-center"
+        style={{ margin: "35px 0px", marginTop: "90px" }}
+      >
         NewsMonkey - Top {capitalizeFirstLetter(props.category)} Headlines
       </h1>
       {loading && <Spinner />}
