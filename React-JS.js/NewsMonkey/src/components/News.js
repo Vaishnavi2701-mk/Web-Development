@@ -1,38 +1,46 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
 import PropTypes from "prop-types";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-export class News extends Component {
-  static defaultProps = {
-    country: "in",
-    pageSize: 8,
-    category: "general",
-  };
+const News = () => {
+  // static defaultProps = {
+  //   country: "in",
+  //   pageSize: 8,
+  //   category: "general",
+  // };
 
-  static propTypes = {
-    country: PropTypes.string,
-    pageSize: PropTypes.number,
-    category: PropTypes.string,
-  };
+  // static propTypes = {
+  //   country: PropTypes.string,
+  //   pageSize: PropTypes.number,
+  //   category: PropTypes.string,
+  // };
+
+  const [articles,setArticles] = useState([])
+  const [loading,setLoading] = useState(true)
+  const [page,setPage] = useState(1)
+  const [totalResults,setTotalResults] = useState(0)
+
+
+
   capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
-  constructor(props) {
-    super(props);
-    this.state = {
-      articles: [],
-      loading: true,
-      page: 1,
-      totalResults: 0,
-    };
-    document.title = `${this.capitalizeFirstLetter(
-      this.props.category
-    )} - NewsMonkey`;
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     articles: [],
+  //     loading: true,
+  //     page: 1,
+  //     totalResults: 0,
+  //   };
+  //   document.title = `${this.capitalizeFirstLetter(
+  //     this.props.category
+  //   )} - NewsMonkey`;
+  // }
 
-  async updateNews() {
+  const updateNews = async()=> {
     this.props.setProgress(0);
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
@@ -114,3 +122,15 @@ export class News extends Component {
 }
 
 export default News;
+
+News.defaultProps = {
+  country: "in",
+  pageSize: 8,
+  category: "general",
+};
+
+News.propTypes = {
+  country: PropTypes.string,
+  pageSize: PropTypes.number,
+  category: PropTypes.string,
+};
