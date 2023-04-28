@@ -340,3 +340,6 @@ In React, pagination can be implemented in various ways, such as using paginatio
 
 On the other hand, if you want to create a custom pagination component, you can use React's state management to keep track of the current page and update the component's UI accordingly.
 
+<h1> React Hooks </h1>
+
+
