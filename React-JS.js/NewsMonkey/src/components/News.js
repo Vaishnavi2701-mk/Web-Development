@@ -58,6 +58,9 @@ const News = (props) => {
   };
 
   useEffect(() => {
+    document.title = `${this.capitalizeFirstLetter(
+      props.category
+    )} - NewsMonkey`;
     updateNews();
     // To avoid warning
     //eslint-disable-next-line
