@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import NewsItem from "./NewsItem";
 import Spinner from "./Spinner";
 import PropTypes from "prop-types";
@@ -21,10 +22,12 @@ const News = (props) => {
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
+  // document.title = `${capitalizeFirstLetter(props.category)} - NewsMonkey`;
 
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
+
   // constructor(props) {
   //   super(props);
   //   this.state = {
@@ -39,7 +42,7 @@ const News = (props) => {
   // }
 
   const updateNews = async () => {
-    props.setProgress(0);
+    props.setProgress(10);
     const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     setLoading(true);
     let data = await fetch(url);
@@ -48,21 +51,17 @@ const News = (props) => {
     props.setProgress(70);
     setArticles(parsedData.articles);
     setTotalResults(parsedData.totalResults);
-    setLoading(false);
     // this.setState({
     //   articles: parsedData.articles,
     //   totalResults: parsedData.totalResults,
     //   loading: false,
     // });
+    setLoading(false);
     props.setProgress(100);
   };
 
   useEffect(() => {
-    document.title = `${this.capitalizeFirstLetter(
-      props.category
-    )} - NewsMonkey`;
     updateNews();
-    // To avoid warning
     //eslint-disable-next-line
   }, []);
 
@@ -70,46 +69,30 @@ const News = (props) => {
   //   this.updateNews();
   // }
 
-  // To avoid warning
-  //eslint-disable-next-line
   const handlePrevClick = async () => {
-    setPage(page - 1);
     // this.setState({ page: this.state.page - 1 });
+    setPage(page - 1);
     updateNews();
   };
 
-  // To avoid warning
-  //eslint-disable-next-line
   const handleNextClick = async () => {
-    setPage(page + 1);
     // this.setState({ page: this.state.page + 1 });
+    setPage(page + 1);
     updateNews();
   };
 
   const fetchMoreData = async () => {
     setPage(page + 1);
-    // this.setState({ page: this.state.page + 1 });
-    const url = `https://newsapi.org/v2/top-headlines?country=${
-      props.country
-    }&category=${props.category}&apiKey=${props.apiKey}=${page + 1}&pageSize=${
-      props.pageSize
-    }`;
+    const url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
     let data = await fetch(url);
     let parsedData = await data.json();
     setArticles(articles.concat(parsedData.articles));
     setTotalResults(parsedData.totalResults);
-    // this.setState({
-    //   articles: this.state.articles.concat(parsedData.articles),
-    //   totalResults: parsedData.totalResults,
-    // });
   };
 
   return (
     <>
-      <h1
-        className="text-center"
-        style={{ margin: "35px 0px", marginTop: "90px" }}
-      >
+      <h1 className="text-center" style={{ margin: "35px 0px" }}>
         NewsMonkey - Top {capitalizeFirstLetter(props.category)} Headlines
       </h1>
       {loading && <Spinner />}
@@ -143,8 +126,6 @@ const News = (props) => {
   );
 };
 
-export default News;
-
 News.defaultProps = {
   country: "in",
   pageSize: 8,
@@ -156,3 +137,5 @@ News.propTypes = {
   pageSize: PropTypes.number,
   category: PropTypes.string,
 };
+
+export default News;
