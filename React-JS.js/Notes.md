@@ -1,6 +1,11 @@
 <h1> React </h1>
 React/React.js/ReactJS is a free, open source javascript frontend library created by Jordan walke & maintained by facebook.
 
+<h3> React StrictMode </h3>
+
+- React strictmode is a developer tool which highlight potencial bugs and issues in React Application codebase.
+- Provide warnings as a feedback for errors without any effect on react because it does not render any visible UI.
+
 <h1>Javascript</h1>
 Javascript is a asynchronous non-blocking IO model, which means it doesn't block second process due to pending process.eloper tool.
 
