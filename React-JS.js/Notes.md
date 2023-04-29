@@ -1,6 +1,9 @@
 <h1> React </h1>
 React/React.js/ReactJS is a free, open source javascript frontend library created by Jordan walke & maintained by facebook.
 
+<h1>Javascript</h1>
+Javascript is a asynchronous non-blocking IO model, which means it doesn't block second process due to pending process.
+
 <h1>Single Page Application</h1>
 
 A page or web application will only load once, and navigating from one page to another page is done by javascript.
