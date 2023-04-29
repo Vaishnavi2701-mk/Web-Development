@@ -8,7 +8,7 @@ Javascript is a asynchronous non-blocking IO model, which means it doesn't block
 npm is a pacake manager used for Node.js to handle backend Javascript.
 
 <h1> React-dev-tools </h1>
-Extension for React, allows us to view react-componant hierarchy in chrome developer tool.    
+Chrome extension for React, allows us to view react-componant hierarchy in chrome developer tool.    
 
 <h1>Single Page Application</h1>
 
