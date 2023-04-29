@@ -146,7 +146,7 @@ aboutText: 'About text here' </br>
 
 <h1> Understanding state and handling events in React </h1>
 
-<h4>State:</h4> A state depicts the local information of a Component. For example: If we write something in our text box it will be the state of our object for that specific point in time. The state is the changeable variable of our app. Whenever the state object changes, the component re-renders itself.
+<h4>State:</h4> A state depicts the local information of a Component. For example: If we write something in our text box it will be the state of our object for that specific point in time. The state is the changeable variable of our app. Whenever the state object changes, the component re-renders itself.</br>
 
  const handleOnChange = (event) => {
     //console.log("onChange");
