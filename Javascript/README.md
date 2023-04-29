@@ -4,6 +4,8 @@
 Javascript is invented by Brendan Eich who first developed Netscape-2 !
 Javascript first developed for firefox but later on it is accepted by mostly every browser!
 
+JavaScript can be both synchronous and asynchronous. Synchronous JavaScript operates in a sequential manner, where the code is executed line by line. Asynchronous JavaScript, on the other hand, allows the code to execute non-sequentially, with multiple functions running at the same time. This is achieved through the use of callbacks, promises, and async/await functions.
+
 Everything in the Javascript is happened inside an "Execution Context"
 
 Execution Context contains 2 things <strong> Memory (variable Environment) </strong> and <strong> Code (Thread of execution) </strong>
