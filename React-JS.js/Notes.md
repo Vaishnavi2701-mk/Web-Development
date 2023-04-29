@@ -2,7 +2,13 @@
 React/React.js/ReactJS is a free, open source javascript frontend library created by Jordan walke & maintained by facebook.
 
 <h1>Javascript</h1>
-Javascript is a asynchronous non-blocking IO model, which means it doesn't block second process due to pending process.
+Javascript is a asynchronous non-blocking IO model, which means it doesn't block second process due to pending process.eloper tool.
+
+<h1> npm - Node Pacakge Manager </h1>
+npm is a pacake manager used for Node.js to handle backend Javascript.
+
+<h1> React-dev-tools </h1>
+Extension for React, allows us to view react-componant hierarchy in chrome developer tool.    
 
 <h1>Single Page Application</h1>
 
