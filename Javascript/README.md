@@ -451,3 +451,12 @@ console: promise {<"pending">}</br>
    
  .then (function (pendingAmount) { </br>
    return updateWallet(pendingAmount)}) </br>
+   
+  we are piping our code inside one another so its imporatnt to return that function. </br>
+  
+  Above code we can write it with the help of arrow function as well. </br>
+  
+  createOrder(cart) </br>
+  .then(orderId => proceedToPayment(orderId)) </br>
+  .then(orderInfo => orderSummary(orderInfo)) </br>
+  .then(pendingAmount => updateWallet(pendingAmount)) </br>
