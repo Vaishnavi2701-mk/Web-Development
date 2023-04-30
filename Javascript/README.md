@@ -432,7 +432,7 @@ eg: const GITHUB_API = "-----------------" </br>
 <h4> Different Behaviour of Promises and Reason behind </h4> </br>
 console.log(user);  </br>
 
-console: promise {<pending>}</br>
+console: promise {<"pending">}</br>
     [[prototype]] = promise </br>
     [[promiseStatus]] = "fullfilled" </br>
     [[promiseResult]] = Response </br>
