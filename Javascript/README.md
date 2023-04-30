@@ -410,3 +410,9 @@ eg: const promise = createOrder(cart);  </br>
 promise.then ( function (orderId) { </br>
 proceedToPayment(orderId); </br>
 }); </br>
+
+In above code:
+promise :-  is a promise object containing no data so, {data: undefined}
+after some time this object will get filled with desired value {data: objectData}
+
+we are attching a function to promise, then only after promise will contain some data inside it then only it will execute!
