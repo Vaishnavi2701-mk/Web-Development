@@ -386,11 +386,11 @@ eg: If we want to place an order we have to follow following steps</br>
 3) our order summary
 4) updating our wallet
 
-const cart= ["shoes", "shirt", "kurta"]
-api.createOrder(cart, function (){
- api.proceedToPayment(function(){
-  api.showOrderSummary(function(){
-   api.updateWallet();
-   })
-   })
-   });
+const cart= ["shoes", "shirt", "kurta"] </br>
+api.createOrder(cart, function (){ </br>
+ api.proceedToPayment(function(){ </br>
+  api.showOrderSummary(function(){ </br>
+   api.updateWallet(); </br>
+   }) </br>
+   }) </br>
+   }); </br>
