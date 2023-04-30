@@ -380,4 +380,17 @@ Callback hell is a term used to describe a situation in asynchronous programming
 
 Inversion of control problem in callback hell in JavaScript occurs when a function's control flow is inverted or out of order due to the use of callback functions. This can make it difficult to read and maintain the code, and can lead to bugs and errors. In callback hell, callbacks are nested within each other, often making it harder to understand the execution order of the entire code. This problem can be solved by using Promise objects or async/await functions, which provide better control flow and readability.</br></br>
 
-eg: 
+eg: If we want to place an order we have to follow following steps</br>
+1) create an order
+2) making a payment
+3) our order summary
+4) updating our wallet
+
+const cart= ["shoes", "shirt", "kurta"]
+api.createOrder(cart, function (){
+ api.proceedToPayment(function(){
+  api.showOrderSummary(function(){
+   api.updateWallet();
+   })
+   })
+   });
