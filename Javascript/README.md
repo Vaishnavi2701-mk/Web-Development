@@ -421,19 +421,19 @@ Benefits:
 1) Promises execute function inside it only once.
 2) We have control of function with us and assurance of execution.
 
-eg: const GITHUB_API = "-----------------"
-    const user = fetch(GITHUB_API);
-    here user is a promise so initially user: undefined and after some time when it fetches a data, 
-    user : promise
-    [[prototype]] = promise
-    [[promiseStatus]] = "pending"
-    [[promiseResult]] = undefined
+eg: const GITHUB_API = "-----------------" </br>
+    const user = fetch(GITHUB_API); </br>
+    here user is a promise so initially user: undefined and after some time when it fetches a data, </br>
+    user : promise </br>
+    [[prototype]] = promise </br>
+    [[promiseStatus]] = "pending" </br>
+    [[promiseResult]] = undefined </br>
     
-<h4> Different Behaviour of Promises and Reason behind </h4>
+<h4> Different Behaviour of Promises and Reason behind </h4> </br>
 console.log(user);  </br>
 
-console: promise {<pending>}
-    [[prototype]] = promise
-    [[promiseStatus]] = "fullfilled"
-    [[promiseResult]] = Response
+console: promise {<pending>}</br>
+    [[prototype]] = promise </br>
+    [[promiseStatus]] = "fullfilled" </br>
+    [[promiseResult]] = Response </br>
 
