@@ -377,3 +377,7 @@ opacity: 0.5;<br>
 Javascript is a symchronous and asynchronous both language, to use asynchronous javascript we use callback functions but due to excesive nesting it may cause callback hell which is also called as Pyramid of doom. It isactually difficult to maintain such code and our code grows horizontally instaed of vertically.
 
 Callback hell is a term used to describe a situation in asynchronous programming where the code becomes difficult to read and maintain due to excessive nesting of multiple callbacks. This occurs when one callback function is called within another callback function, resulting in a long chain of nested callbacks. This can create complex and convoluted code that is difficult for humans to read, debug, and maintain. It can also make it difficult to handle errors and lead to poor performance.
+
+Inversion of control problem in callback hell in JavaScript occurs when a function's control flow is inverted or out of order due to the use of callback functions. This can make it difficult to read and maintain the code, and can lead to bugs and errors. In callback hell, callbacks are nested within each other, often making it harder to understand the execution order of the entire code. This problem can be solved by using Promise objects or async/await functions, which provide better control flow and readability.</br></br>
+
+eg: 
