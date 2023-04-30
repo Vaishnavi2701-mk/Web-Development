@@ -372,4 +372,8 @@ opacity: 0.5;<br>
 <li>Mark and Sweep Algorithm used for garbage collection for fast execution</li>
 </ul>
 
-> > > > > > > origin
+<h1> CallBack Hell and Inversion Control </h1>
+
+Javascript is a symchronous and asynchronous both language, to use asynchronous javascript we use callback functions but due to excesive nesting it may cause callback hell which is also called as Pyramid of doom. It isactually difficult to maintain such code and our code grows horizontally instaed of vertically.
+
+Callback hell is a term used to describe a situation in asynchronous programming where the code becomes difficult to read and maintain due to excessive nesting of multiple callbacks. This occurs when one callback function is called within another callback function, resulting in a long chain of nested callbacks. This can create complex and convoluted code that is difficult for humans to read, debug, and maintain. It can also make it difficult to handle errors and lead to poor performance.
