@@ -436,4 +436,18 @@ console: promise {<"pending">}</br>
     [[prototype]] = promise </br>
     [[promiseStatus]] = "fullfilled" </br>
     [[promiseResult]] = Response </br>
-
+    
+    
+ <h1> Promise Chaining </h1>
+ 
+ With the help of promise chaining we can deal with callback hell issue. </br>
+ 
+ createOrder(cart) </br>
+ .then (function (orderId) { </br>
+   return proceedToPayment(orderId)}) </br>
+  
+ .then (function (paymentInfo) { </br>
+   return orderSummary(paymentInfo)}) </br>
+   
+ .then (function (pendingAmount) { </br>
+   return updateWallet(pendingAmount)}) </br>
