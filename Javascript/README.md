@@ -397,10 +397,16 @@ api.createOrder(cart, function (){ </br>
 
 <h1> Promises </h1>
 
-The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.  </br>
 
-A Promise is in one of these states:
+A Promise is in one of these states: </br>
 
-pending: initial state, neither fulfilled nor rejected.
-fulfilled: meaning that the operation was completed successfully.
-rejected: meaning that the operation failed.
+pending: initial state, neither fulfilled nor rejected.  </br>
+fulfilled: meaning that the operation was completed successfully.  </br>
+rejected: meaning that the operation failed.  </br>
+
+To handle issues like callback hell, inversion of control we use promises, promises is an object which hold a data. To handle inversion of control we use following code; </br>
+eg: const promise = createOrder(cart);  </br>
+promise.then ( function (orderId) { </br>
+proceedToPayment(orderId); </br>
+}); </br>
