@@ -10,10 +10,13 @@ const cart = ["shoes", "dress", "jewllery"];
 //     console.log(err.message);
 //   });
 
+// createOrder is a promise object and when this object contain some data thereafter "then" function will run
+
 createOrder(cart)
   .then(function (orderId) {
     console.log(orderId);
   })
+  // It will handle any type of error
   .catch(function (err) {
     console.log(err.message);
   });
@@ -21,6 +24,7 @@ createOrder(cart)
 // producer part
 
 function createOrder(cart) {
+  // creating promise , it takes two parameters
   const pr = new Promise(function (resolve, reject) {
     //createOrder
     //proceedToPayment
@@ -43,10 +47,13 @@ function createOrder(cart) {
   });
   return pr;
 }
+
 function valideCart(cart) {
   return true;
 }
 
+// If function will return true it will simply print an output but what if it returns false it will throe an error in console, so
+// to handle it we will keep a catch function attached to it.
 // function valideCart(cart) {
 //   return false;
 // }
