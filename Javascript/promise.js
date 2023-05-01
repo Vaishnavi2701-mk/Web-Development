@@ -24,7 +24,7 @@ createOrder(cart)
 // producer part
 
 function createOrder(cart) {
-  // creating promise , it takes two parameters
+  // creating promise , it takes two parameters, and they can be use only once that is one more benefit of using promises
   const pr = new Promise(function (resolve, reject) {
     //createOrder
     //proceedToPayment
