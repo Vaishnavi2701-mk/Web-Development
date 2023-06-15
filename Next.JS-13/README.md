@@ -57,14 +57,14 @@ In Next.JS whole lot of these things happens automatically likw when we navigate
 <h1> File & Folder Structure </h1>
 <h2> Creating Next.JS app & Importing Dependencies </h2>
 
-(base) vaishnavimokadam@Vaishnavis-MacBook-Air share_prompts % npx create-next-app@latest ./
-✔ Would you like to use TypeScript with this project? … No / Yes
-✔ Would you like to use ESLint with this project? … No / Yes
-✔ Would you like to use Tailwind CSS with this project? … No / Yes
-✔ Would you like to use `src/` directory with this project? … No / Yes
-✔ Use App Router (recommended)? … No / Yes
-✔ Would you like to customize the default import alias? … No / Yes
-✔ What import alias would you like configured? … @/*
+(base) vaishnavimokadam@Vaishnavis-MacBook-Air share_prompts % npx create-next-app@latest ./ </br>
+✔ Would you like to use TypeScript with this project? … No / Yes </br>
+✔ Would you like to use ESLint with this project? … No / Yes </br>
+✔ Would you like to use Tailwind CSS with this project? … No / Yes </br>
+✔ Would you like to use `src/` directory with this project? … No / Yes </br>
+✔ Use App Router (recommended)? … No / Yes </br>
+✔ Would you like to customize the default import alias? … No / Yes </br>
+✔ What import alias would you like configured? … @/* </br>
 
 <img width="183" alt="Screenshot 2023-06-15 at 10 16 58 AM" src="https://github.com/Vaishnavi2701-mk/Web-Development/assets/89184872/2cc969b8-313b-4769-bf5a-62a898c0592b">
 
