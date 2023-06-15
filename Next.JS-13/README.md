@@ -68,3 +68,6 @@ In Next.JS whole lot of these things happens automatically likw when we navigate
 
 <img width="183" alt="Screenshot 2023-06-15 at 10 16 58 AM" src="https://github.com/Vaishnavi2701-mk/Web-Development/assets/89184872/2cc969b8-313b-4769-bf5a-62a898c0592b">
 
+<h1> When to use Server VS Client Components </h1>
+
+https://nextjs.org/docs/getting-started/react-essentials
