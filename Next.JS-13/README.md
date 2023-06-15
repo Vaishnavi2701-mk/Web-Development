@@ -53,9 +53,8 @@ Code splitting is a technique that breaks down large bundles of Javascript code 
 This process is manually handles in React.JS and we have to configure the code, we can do this by using "lazy" or "suspicious" function of React.
 In Next.JS whole lot of these things happens automatically likw when we navigate from one page to another only code required for that page is loaded which results in faster subsequent page navigation.
 
-<<<<<<< HEAD
+
 Next.JS leverages server side rendering to enhance the loading speed results in good SEO. So all the next.JS components inside "app" directory are react server-side components. To convert a server-side component into client side we have to simply add 'use client'; on top of the file. Mostly react hooks and state management happens on client-side so we have to convert that component into client-side to use "useState", "useEffect".
-=======
 
 <h1> File & Folder Structure </h1>
 <h2> Creating Next.JS app & Importing Dependencies </h2>
@@ -99,3 +98,8 @@ There is a concept known as "Dynamic Routing" which is a flexible system where w
 /post/blog-post-1
 /post/blog-post-2
 /post/blog-post-3
+
+Next.JS follows simple and similar process but this time the folder name should be inside "[]" to indicate that it is dynamic route.
+<img width="158" alt="Screenshot 2023-06-15 at 11 29 42 AM" src="https://github.com/Vaishnavi2701-mk/Web-Development/assets/89184872/2c7ef390-dec3-49cf-b54f-ac901a904f2e">
+
+Then we can create layout.js file inside a posts directory so that we can share UI between the components and "error.js" file will show all the errors but it must be client-side component.
