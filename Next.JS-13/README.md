@@ -142,3 +142,51 @@ const data = await res.json();
 
 ISR uses both the functionalities of SSR and SSG that it will cache the data after specific amount of time by using this {next: {revalidate:10}}
 
+Next.JS covers all the features of a traditionl server like, middleware, parsing authentication checks and even serverless funcyions which simplifies the deployment process and scaling of API routes. 
+
+There are two methods to craete route handlers, file based handlers and manually creating routes inside app directory. But directly creating routes.js is bad practise as Next.JS wouldn't br able to kow that it is a regular frontend-page or backend API. Thus keeping all the backend logic and API endpoints inside api folder is more better.
+
+
+Next.JS introduce Metadata API and it provides two type of metadata.
+
+1. Static Metadata
+2. Dynamic Metadata
+
+<h1>1. Static Metadata</h1>
+
+export const metadata = {
+    title: 'Home',
+};
+
+Output: 
+
+<head>
+ <title>Home</title>
+</head>
+
+export default function Page(){
+    return (
+        <h1>My Normal Next.js page with Static Metadata</h1>
+    )
+}
+
+<h1>2. Dynamic Metadata</h1>
+
+export async function generateMetadata({params, searchParams}){
+    const product = await getProduct(params.id);
+    return {
+        title: product.title
+    }
+}
+
+Output: 
+
+<head>
+ <title>My Unique Product</title>
+</head>
+
+export default function Page(){
+    return (
+        <h1>My Normal Next.js page with Dynamic Metadata</h1>
+    )
+}
