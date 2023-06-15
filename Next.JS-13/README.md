@@ -56,6 +56,7 @@ In Next.JS whole lot of these things happens automatically likw when we navigate
 <<<<<<< HEAD
 Next.JS leverages server side rendering to enhance the loading speed results in good SEO. So all the next.JS components inside "app" directory are react server-side components. To convert a server-side component into client side we have to simply add 'use client'; on top of the file. Mostly react hooks and state management happens on client-side so we have to convert that component into client-side to use "useState", "useEffect".
 =======
+
 <h1> File & Folder Structure </h1>
 <h2> Creating Next.JS app & Importing Dependencies </h2>
 
@@ -66,11 +67,35 @@ Next.JS leverages server side rendering to enhance the loading speed results in 
 ✔ Would you like to use `src/` directory with this project? … No / Yes </br>
 ✔ Use App Router (recommended)? … No / Yes </br>
 ✔ Would you like to customize the default import alias? … No / Yes </br>
-✔ What import alias would you like configured? … @/* </br>
+✔ What import alias would you like configured? … @/\* </br>
 
 <img width="183" alt="Screenshot 2023-06-15 at 10 16 58 AM" src="https://github.com/Vaishnavi2701-mk/Web-Development/assets/89184872/2cc969b8-313b-4769-bf5a-62a898c0592b">
 
 <h1> When to use Server VS Client Components </h1>
 
 https://nextjs.org/docs/getting-started/react-essentials
->>>>>>> refs/remotes/origin/main
+
+> > > > > > > refs/remotes/origin/main
+
+<h1>Routing and special Next.JS file</h1>
+
+In case of react we have to import "react-router-dom" and structure will look like this;
+
+<Router>
+<Routes>
+  <Route path="/" element = {<Home/>} />
+  <Route path="about" element = {<About/>} />
+  <Route path="posts" element = {<Posts/>} />
+       <Route path="new" element = {<NewPost/>} />
+</Routes>
+</Router>
+
+But in case of Next.JS, we have simply create a folder named same as path to create a route inside app, and similar for nested routing.
+Consider a blog page where there is a page blog and a new page inside blog as "new-post".
+
+There is a concept known as "Dynamic Routing" which is a flexible system where we can create dynamic web pages based on variable names and data. Considering previous example.
+
+/post/:postID
+/post/blog-post-1
+/post/blog-post-2
+/post/blog-post-3
