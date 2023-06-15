@@ -53,4 +53,24 @@ Code splitting is a technique that breaks down large bundles of Javascript code 
 This process is manually handles in React.JS and we have to configure the code, we can do this by using "lazy" or "suspicious" function of React.
 In Next.JS whole lot of these things happens automatically likw when we navigate from one page to another only code required for that page is loaded which results in faster subsequent page navigation.
 
+<<<<<<< HEAD
 Next.JS leverages server side rendering to enhance the loading speed results in good SEO. So all the next.JS components inside "app" directory are react server-side components. To convert a server-side component into client side we have to simply add 'use client'; on top of the file. Mostly react hooks and state management happens on client-side so we have to convert that component into client-side to use "useState", "useEffect".
+=======
+<h1> File & Folder Structure </h1>
+<h2> Creating Next.JS app & Importing Dependencies </h2>
+
+(base) vaishnavimokadam@Vaishnavis-MacBook-Air share_prompts % npx create-next-app@latest ./ </br>
+✔ Would you like to use TypeScript with this project? … No / Yes </br>
+✔ Would you like to use ESLint with this project? … No / Yes </br>
+✔ Would you like to use Tailwind CSS with this project? … No / Yes </br>
+✔ Would you like to use `src/` directory with this project? … No / Yes </br>
+✔ Use App Router (recommended)? … No / Yes </br>
+✔ Would you like to customize the default import alias? … No / Yes </br>
+✔ What import alias would you like configured? … @/* </br>
+
+<img width="183" alt="Screenshot 2023-06-15 at 10 16 58 AM" src="https://github.com/Vaishnavi2701-mk/Web-Development/assets/89184872/2cc969b8-313b-4769-bf5a-62a898c0592b">
+
+<h1> When to use Server VS Client Components </h1>
+
+https://nextjs.org/docs/getting-started/react-essentials
+>>>>>>> refs/remotes/origin/main
